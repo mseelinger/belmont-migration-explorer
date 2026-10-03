@@ -8,7 +8,7 @@ Live app: https://belmont-migration-explorer.streamlit.app/
 
 - Annual arrivals, departures, net registration change, electorate stocks and turnover rates.
 - Enriched origin evidence, coverage, origin rankings and filtered CSV downloads.
-- Combined-period migration map and animated annual maps, with widths proportional to event counts.
+- Combined-period migration map and animated annual maps, with stronger lines scaled by the square root of arrival counts and zero-count dots hidden.
 - Arrival, departure and ending-electorate profiles by party, age, precinct, sex and race codes; additional arrival classification and registration-timing breakdowns.
 - Ending-snapshot registration evidence for departures.
 - Arrival cohort retention, distinguishing endpoint presence from continuous observed presence.

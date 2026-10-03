@@ -61,4 +61,7 @@ def test_map_animation_totals_and_widths():
     for frame in fig.frames:
         lines=frame.data[:-2]
         assert sum(int(t.text.split('<br>')[1].split()[0].replace(',','')) for t in lines)==int(flows.loc[flows.cohort_year.eq(int(frame.name)),'movers'].sum())
-        assert all(0<=t.line.width<=8 for t in lines)
+        assert all(0<=t.line.width<=11.2 for t in lines)
+
+        counts=[int(t.text.split('<br>')[1].split()[0].replace(',','')) for t in lines]
+        assert all(size==0 for size,count in zip(frame.data[-2].marker.size,counts) if count==0)

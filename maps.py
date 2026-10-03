@@ -1,5 +1,6 @@
 """Aggregate origin maps with comparable widths across animation frames."""
 import plotly.graph_objects as go
+import math
 
 COLORS={'OBSERVED':'#2878A5','HISTORICAL_OBSERVED':'#238C7C','INFERRED':'#E78A38'}
 LABELS={'OBSERVED':'Prior NC registration','HISTORICAL_OBSERVED':'Historical NC evidence','INFERRED':'Inferred state proxy'}
@@ -19,13 +20,13 @@ def migration_map(flows, animate=False, years=None, region='United States'):
             key=tuple(getattr(route,c) for c in KEYS)
             count=int(totals.get(key,0)); evidence=route.origin_confidence
             result.append(go.Scattergeo(lon=[route.origin_lon,route.dest_lon],lat=[route.origin_lat,route.dest_lat],
-                mode='lines',line=dict(width=8*count/maximum if count else 0,color=COLORS.get(evidence,'#697987')),
-                opacity=.65 if count else 0, name=LABELS.get(evidence,evidence),legendgroup=evidence,
+                mode='lines',line=dict(width=1.2+10*math.sqrt(count/maximum) if count else 0,color=COLORS.get(evidence,'#697987')),
+                opacity=.95 if count else 0, name=LABELS.get(evidence,evidence),legendgroup=evidence,
                 showlegend=evidence not in seen,
-                text=f'{route.origin_name} → Belmont<br>{count:,} events<br>{LABELS.get(evidence,evidence)}',hoverinfo='text'))
+                text=f'{route.origin_name} → Belmont<br>{count:,} arrivals<br>{LABELS.get(evidence,evidence)}',hoverinfo='text'))
             seen.add(evidence)
         result.append(go.Scattergeo(lon=grouped.origin_lon,lat=grouped.origin_lat,mode='markers',
-            marker=dict(size=5,color='#526875'),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} events' for r in routes],hoverinfo='text',showlegend=False))
+            marker=dict(size=[5 if totals.get(tuple(getattr(r,c) for c in KEYS),0) else 0 for r in routes],color='#526875'),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} arrivals' for r in routes],hoverinfo='text',showlegend=False))
         result.append(go.Scattergeo(lon=[routes[0].dest_lon],lat=[routes[0].dest_lat],mode='markers+text',
             marker=dict(size=10,color='#203344'),text=['Belmont'],textposition='bottom right',showlegend=False,hoverinfo='text'))
         return result

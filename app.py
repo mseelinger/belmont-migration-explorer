@@ -47,9 +47,9 @@ with overview:
     cards[3].metric('Unique people arriving',f'{stat.unique_arrivals:,}')
     st.caption('Events are changes in snapshot membership, which can include moves, new registrations, removals, and reactivations. A person may arrive more than once; these are not population migration estimates.')
     st.subheader('Arrivals and departures over time')
-    fig=go.Figure(go.Bar(x=view.year,y=view.arrivals,name='Arrivals',marker_color=BLUE))
-    fig.add_bar(x=view.year,y=view.departures,name='Departures',marker_color=ORANGE)
-    fig.add_scatter(x=view.year,y=view.net_change,name='Net registration change',mode='lines+markers',line=dict(color='#203344'))
+    fig=go.Figure(go.Bar(x=view.year,y=view.arrivals,name='Arrivals',marker_color=BLUE,hovertemplate='Year: %{x}<br>Arrivals: %{y:,}<extra></extra>'))
+    fig.add_bar(x=view.year,y=view.departures,name='Departures',marker_color=ORANGE,hovertemplate='Year: %{x}<br>Departures: %{y:,}<extra></extra>')
+    fig.add_scatter(x=view.year,y=view.net_change,name='Net registration change',mode='lines+markers',line=dict(color='#203344'),hovertemplate='Year: %{x}<br>Net change: %{y:+,}<extra></extra>')
     fig.update_layout(barmode='group',yaxis_title='Registration events')
     chart(fig,True)
     st.subheader('Electorate size and turnover')
@@ -77,7 +77,7 @@ with origins:
     filtered=scoped[scoped.origin_confidence.isin(evidence)]
     names=st.multiselect('Origin locations (blank means all)',sorted(filtered.origin_name.unique()))
     if names: filtered=filtered[filtered.origin_name.isin(names)]
-    st.caption(f'{int(filtered.movers.sum()):,} arrival events match the origin filters. Coverage above is calculated before these filters.')
+    st.caption(f'{int(filtered.movers.sum()):,} arrivals match the origin filters. Coverage above is calculated before these filters.')
     if filtered.empty:
         st.info('No origins match these filters.')
     else:
@@ -85,24 +85,23 @@ with origins:
         mode=left.radio('Map period',['Selected years combined','Animate annual cohorts'],horizontal=True)
         region=right.radio('Map view',['United States','North Carolina'],horizontal=True)
         st.plotly_chart(migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region),width='stretch',key='migration_map')
-        st.caption('Lines connect county/state centroids to Belmont. Width is proportional to arrival events; annual animation uses a fixed scale across years. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
+        st.caption('Lines connect county/state centroids to Belmont. Line width increases with arrival counts on a square-root scale, making smaller flows visible; annual animation uses a fixed scale across years. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
         ranking=filtered.groupby(['origin_name','origin_confidence'],as_index=False).movers.sum()
         top_names=ranking.groupby('origin_name').movers.sum().nlargest(20).index
         top=ranking[ranking.origin_name.isin(top_names)].copy(); top['Evidence']=top.origin_confidence.map(LABELS)
         fig=px.bar(top,x='movers',y='origin_name',color='Evidence',orientation='h',color_discrete_map={LABELS[k]:v for k,v in COLORS.items()})
-        fig.update_layout(yaxis=dict(categoryorder='total ascending'),xaxis_title='Arrival events',yaxis_title=None,height=600)
+        fig.update_layout(yaxis=dict(categoryorder='total ascending'),xaxis_title='Arrivals',yaxis_title=None,height=600)
         chart(fig)
         trend=filtered.groupby(['cohort_year','origin_confidence']).movers.sum().unstack(fill_value=0).reindex(view.year,fill_value=0).fillna(0).rename_axis('year').reset_index()
-        trend=trend.melt(id_vars='year',var_name='Evidence',value_name='Arrival events'); trend.Evidence=trend.Evidence.map(LABELS)
-        chart(px.line(trend,x='year',y='Arrival events',color='Evidence',markers=True,color_discrete_map={LABELS[k]:v for k,v in COLORS.items()}),True)
-        st.dataframe(ranking.sort_values('movers',ascending=False),hide_index=True,width='stretch')
+        trend=trend.melt(id_vars='year',var_name='Evidence',value_name='Arrivals'); trend.Evidence=trend.Evidence.map(LABELS)
+        chart(px.line(trend,x='year',y='Arrivals',color='Evidence',markers=True,color_discrete_map={LABELS[k]:v for k,v in COLORS.items()}),True)
         download('Download filtered origin totals',filtered,'origin_totals.csv')
 
 with profile_tab:
     st.subheader('Who appears in the snapshots?')
     population=st.radio('Population',['Arrivals','Departures','Ending electorate'],horizontal=True)
-    available=sorted(profiles.loc[profiles.population.eq(population),'dimension'].unique())
-    dimension=st.selectbox('Breakdown',available,index=available.index('Party'))
+    available=sorted(profiles.dimension.unique())
+    dimension=st.selectbox('Breakdown',available,index=available.index('Party'),key='profile_breakdown')
     p=filter_years(profiles,'year',selected)
     p=p[p.population.eq(population)&p.dimension.eq(dimension)].copy()
     if population=='Ending electorate':
@@ -113,16 +112,31 @@ with profile_tab:
         st.caption('Profile fields come from each departure’s starting snapshot.')
     else:
         st.caption('Profile fields come from each arrival’s ending snapshot; ages outside 16–110 are grouped as unknown / invalid.')
-    grouped=p.groupby('category',as_index=False).events.sum().sort_values('events',ascending=False)
-    grouped['Share (%)']=100*grouped.events/grouped.events.sum()
-    chart(px.bar(grouped,x='events',y='category',orientation='h',color_discrete_sequence=[BLUE]).update_layout(yaxis=dict(categoryorder='total ascending'),xaxis_title='Voters' if population=='Ending electorate' else 'Events',yaxis_title=None))
-    st.dataframe(grouped,hide_index=True,width='stretch')
+    if p.empty:
+        st.info(f'{dimension} is available for arrivals only. Choose another breakdown to inspect {population.lower()}.')
+    else:
+        grouped=p.groupby('category',as_index=False).events.sum().sort_values('events',ascending=False)
+        grouped['Share (%)']=100*grouped.events/grouped.events.sum()
+        age_order=['16–24','25–34','35–44','45–54','55–64','65+','Unknown / invalid']
+        if dimension=='Age':
+            grouped=grouped.set_index('category').reindex([c for c in age_order if c in grouped.category.values]).reset_index()
+        fig=px.bar(grouped,x='events',y='category',orientation='h',color_discrete_sequence=[BLUE])
+        fig.update_layout(yaxis=dict(categoryorder='array',categoryarray=grouped.category.tolist()[::-1]),xaxis_title='Voters' if population=='Ending electorate' else 'Registrations',yaxis_title=None)
+        chart(fig)
+        st.dataframe(grouped,hide_index=True,width='stretch',column_config={'Share (%)':st.column_config.NumberColumn(format='%.1f')})
     download('Download selected profile',p,'profile_totals.csv')
     st.subheader('What appears after a departure?')
     st.caption('These are ending-snapshot registration locations, not confirmed residential destinations. Removed-only and absent records can reflect death, cancellation, or other changes, as well as moves.')
     dest=filter_years(destinations,'year',selected)
-    dt=dest.groupby(['destination','evidence'],as_index=False).events.sum().sort_values('events',ascending=False)
-    st.dataframe(dt,hide_index=True,width='stretch')
+    dt=dest.groupby('destination',as_index=False).events.sum().sort_values('events',ascending=False)
+    top=dt.head(12).copy()
+    if len(dt)>12:
+        top=pd.concat([top,pd.DataFrame([{'destination':'Other registration locations','events':int(dt.iloc[12:].events.sum())}])],ignore_index=True)
+    top['Share (%)']=100*top.events/dest.events.sum()
+    fig=px.bar(top,x='events',y='destination',orientation='h',text='events',color_discrete_sequence=[ORANGE],custom_data=['Share (%)'])
+    fig.update_traces(texttemplate='%{x:,}',hovertemplate='%{y}<br>Departures: %{x:,}<br>Share: %{customdata[0]:.1f}%<extra></extra>')
+    fig.update_layout(yaxis=dict(categoryorder='total ascending'),xaxis_title='Departures',yaxis_title=None,height=540)
+    chart(fig)
     download('Download departure evidence',dest,'departure_evidence.csv')
 
 with cohorts:
@@ -133,22 +147,25 @@ with cohorts:
     column='present' if measure=='Present at each snapshot' else 'continuously_present'
     r['Retention (%)']=100*r[column]/r.cohort_size
     r['Cohort']=r.cohort_year.astype(str)
-    chart(px.line(r,x='years_since_arrival',y='Retention (%)',color='Cohort',markers=True).update_layout(xaxis_title='Years since arrival snapshot',yaxis=dict(range=[0,105])))
+    blues=px.colors.sample_colorscale('Blues',[.35+.65*i/(len(years)-1) for i in range(len(years))])
+    cohort_colors={str(y):color for y,color in zip(years,blues)}
+    chart(px.line(r,x='years_since_arrival',y='Retention (%)',color='Cohort',markers=True,color_discrete_map=cohort_colors).update_layout(xaxis_title='Years since arrival snapshot',yaxis=dict(range=[0,105])))
     st.caption('Year 0 is the ending snapshot that identifies the arrival. Continuous presence means present in every observed annual snapshot; changes between snapshots cannot be detected. Recent cohorts have shorter follow-up.')
     heat=r.pivot(index='cohort_year',columns='snapshot_year',values='Retention (%)')
-    chart(px.imshow(heat,text_auto='.1f',color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='January 1 snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto'))
+    chart(px.imshow(heat,text_auto='.1f',color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='January 1 snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto').update_traces(texttemplate='%{z:.1f}%',hovertemplate='Cohort: %{y}<br>Snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>'))
     download('Download cohort retention',r.drop(columns=['Cohort']),'cohort_retention.csv')
     st.subheader('Composition of the January 1, 2026 electorate')
     st.caption('Each currently registered voter is assigned to their latest observed arrival spell, or to Before 2016 if no later re-entry was observed. This fixed snapshot is independent of the sidebar range.')
-    c=composition.copy(); c['Share (%)']=100*c.voters/c.voters.sum()
+    c=composition.copy()
+    c=c.sort_values('arrival_cohort',key=lambda values:pd.to_numeric(values,errors='coerce').fillna(2015))
+    c['Share (%)']=(100*c.voters/c.voters.sum()).round(1)
     chart(px.bar(c,x='arrival_cohort',y='voters',color_discrete_sequence=[BLUE]).update_layout(xaxis_title='Latest arrival cohort',yaxis_title='Registered voters',xaxis_type='category'))
-    st.dataframe(c,hide_index=True,width='stretch')
+    st.dataframe(c,hide_index=True,width='stretch',column_config={'Share (%)':st.column_config.NumberColumn(format='%.1f')})
     download('Download 2026 electorate composition',c,'electorate_composition_2026.csv')
 
 with methods:
     st.subheader('Sources and reconciliation')
-    st.success(f"Integrated {metadata['source_files']} source files: all 11 annual snapshots and 64 output, validation, mapping and cache files. Final enriched exports supply origin evidence; intermediate caches are audit inputs and are not added to the totals.")
-    for note in metadata['quality_notes']: st.info(note)
+    for note in metadata['quality_notes'][1:]: st.info(note)
     st.markdown('''
 - **Population:** `county_desc = GASTON`, `municipality_desc = BELMONT`, and `status_cd != R`. The municipality field defines the boundary; a Belmont mailing city alone is insufficient. Active, inactive and other non-removed statuses are included.
 - **Arrival / departure:** set differences of NC voter identifiers between consecutive January 1 Belmont snapshots. An arrival can be new registration, reactivation, or a move. A departure can be removal, death, a move, or a geography/status change.
