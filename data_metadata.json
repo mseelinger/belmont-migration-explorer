@@ -1,0 +1,28 @@
+{
+  "source_folder": "ncsbe_migration",
+  "snapshot_dates": [
+    "2016-01-01",
+    "2017-01-01",
+    "2018-01-01",
+    "2019-01-01",
+    "2020-01-01",
+    "2021-01-01",
+    "2022-01-01",
+    "2023-01-01",
+    "2024-01-01",
+    "2025-01-01",
+    "2026-01-01"
+  ],
+  "geography": "county_desc = GASTON and municipality_desc = BELMONT",
+  "status_rule": "status_cd != R",
+  "source_files": 75,
+  "arrival_events": 14499,
+  "unique_arrivals": 14330,
+  "mapped_arrivals": 10293,
+  "original_mapped_arrivals": 9998,
+  "quality_notes": [
+    "cohort_summary.csv reports 8,634 arrivals in 2016 (the ending stock). Snapshot sets and validation exports agree on 1,740 arrivals; the stale summary is not used.",
+    "Ages outside 16\u2013110 are reported as Unknown / invalid.",
+    "County/state centroid coordinates represent aggregate origin evidence, not individual addresses."
+  ]
+}

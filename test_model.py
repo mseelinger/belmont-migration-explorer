@@ -34,3 +34,31 @@ def test_flow_coverage_and_private_columns(tmp_path):
     assert "ncid" not in df
     with pytest.raises(ValueError):
         validate_flow_totals(df,load_arrivals(DATA))
+
+
+def test_real_exports_reconcile():
+    from model import load_bundle
+    root=Path(__file__).parent
+    annual,flows,coverage,profiles,retention,destinations,composition,ranges,meta=load_bundle(root)
+    assert annual.arrivals.sum()==14499
+    assert annual.departures.sum()==9153
+    assert annual.iloc[-1].end_voters-annual.iloc[0].start_voters==5346
+    assert flows.movers.sum()==10293
+    assert composition.voters.sum()==13057
+    assert meta['source_files']==75
+    for cohort, group in retention.groupby('cohort_year'):
+        assert group.sort_values('snapshot_year').continuously_present.diff().dropna().le(0).all()
+        assert group.iloc[0].present==group.iloc[0].cohort_size
+    assert ranges.unique_arrivals.le(ranges.arrival_events).all()
+
+
+def test_map_animation_totals_and_widths():
+    from maps import migration_map
+    from model import load_map_flows
+    flows=load_map_flows(Path(__file__).parent/'flows_enriched.csv')
+    fig=migration_map(flows,animate=True,years=list(range(2016,2026)))
+    assert len(fig.frames)==10
+    for frame in fig.frames:
+        lines=frame.data[:-2]
+        assert sum(int(t.text.split('<br>')[1].split()[0].replace(',','')) for t in lines)==int(flows.loc[flows.cohort_year.eq(int(frame.name)),'movers'].sum())
+        assert all(0<=t.line.width<=8 for t in lines)

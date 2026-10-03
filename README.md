@@ -1,80 +1,59 @@
-# Tar Heel Tally — Belmont Migration Explorer
+# Belmont Migration Explorer
 
-Streamlit app for public exploration of changes in Belmont's registered electorate.
-This version includes the original annual origin and coverage exports from the supplied Drive folder (modified August 29, 2026). It runs immediately with 2016–2025 arrival totals and origin exploration. It is a development starter, not a publication-ready
-migration estimate. No synthetic origin, departure, or cohort values are included.
+Tar Heel Tally’s Streamlit explorer of Belmont’s registered electorate, comparing January 1 snapshots from 2016 through 2026.
 
-## Run locally
+Live app: https://belmont-migration-explorer.streamlit.app/
 
-Use Python 3.11 or 3.12:
+## What is included
+
+- Annual arrivals, departures, net registration change, electorate stocks and turnover rates.
+- Enriched origin evidence, coverage, origin rankings and filtered CSV downloads.
+- Combined-period migration map and animated annual maps, with widths proportional to event counts.
+- Arrival, departure and ending-electorate profiles by party, age, precinct, sex and race codes; additional arrival classification and registration-timing breakdowns.
+- Ending-snapshot registration evidence for departures.
+- Arrival cohort retention, distinguishing endpoint presence from continuous observed presence.
+- January 1, 2026 electorate composition by latest observed arrival spell.
+- Full source inventory, SHA-256 checksums and reconciliation notes.
+
+All 75 files in the supplied `ncsbe_migration` source were retrieved: 11 annual snapshots and 64 output files. Final enriched tables provide origin evidence; older versions and restart caches support provenance and are not added together as extra voters.
+
+The public app loads only aggregate CSVs. No individual voter identifiers, addresses, names or voter histories are published.
+
+## Run and test
 
 ```bash
-python -m venv .venv
-source .venv/bin/activate
 pip install -r requirements.txt
 streamlit run app.py
 ```
 
-On Windows, activate with `.venv\Scripts\activate`.
-
-## GitHub and deployment
-
-Create a repository named `belmont-migration-explorer` (or use an existing repository).
-Upload this folder's contents so `app.py` and `requirements.txt` are at the repository root.
-Alternatively initialize and push with Git:
-
-```bash
-git init -b main
-git add .
-git commit -m "Build Belmont migration explorer"
-git remote add origin YOUR_GITHUB_REPOSITORY_URL
-git push -u origin main
-```
-
-Then use Streamlit Community Cloud's Create app workflow, selecting the repository,
-`main` branch and `app.py` entrypoint. Select the same Python version used locally.
-GitHub stores the code; Streamlit runs the Python app. GitHub Pages cannot run this app.
-Official guide: https://docs.streamlit.io/deploy/streamlit-community-cloud/deploy-your-app/deploy
-
-## Load the original exports
-
-The earlier analysis wrote files under:
-`ncsbe_migration/outputs/GASTON_BELMONT/map_outputs/` in Google Drive.
-
-1. Copy the latest aggregate `belmont_annual_flows_2016_2025.csv` into the repository root.
-   Required columns: `cohort_year,origin_type,origin_state,origin_county,origin_name,origin_class,origin_confidence,movers`.
-   One row per year/origin/evidence combination. Unmapped arrivals are not assumed to have a location.
-2. Export the full annual stock/flow summary as `annual_summary.csv`.
-   Required columns: `year,start_voters,arrivals,departures,retained,end_voters`.
-   The app checks both stock identities and continuity between consecutive years.
-3. Confirm snapshot dates, Belmont municipality field, inclusion of active/inactive
-   statuses, and matching rules from the source pipeline. Document these before publication.
-4. Reconcile recovered totals with the latest enriched outputs and archive the exact
-   export date. The recovered annual arrival events total 14,499.
-
-Origin totals must not exceed all arrivals. Extra columns are discarded by an allowlist.
-The origin filters affect only the Origins tab; Overview continues to show all arrivals.
-An inferred state is a proxy, not an observed previous state of residence.
-
-Only reviewed aggregate exports belong in the public repository. Keep voter-level files,
-names, addresses, NCIDs and source snapshots outside it; `private_data/` and Parquet
-files are ignored, but this does not replace review of files before committing.
-
-## Next data needed
-
-- Departure destination aggregates, separating observed moves from removals/unresolved cases.
-- Retention aggregates at cohort-year × observation-year grain, with cohort sizes and snapshot dates.
-- Current electorate composition by first observed Belmont cohort (including baseline and reentries).
-- Reviewed aggregate party/age/precinct dimensions and origin coordinates for maps.
-
-These are intentionally unavailable until the underlying data supports them.
-
-## Validation
+For tests and private data preparation:
 
 ```bash
 pip install -r requirements-dev.txt
-python -m pytest
+pytest -q
+python prepare_data.py /path/to/ncsbe_migration --out .
 ```
 
-## Included export validation
-773 annual origin rows reconcile exactly to all 9,998 mapped arrival events in the coverage export; total arrivals are 14,499. The browser-upload layout keeps aggregate CSVs and test files at the repository root. The app also supports a data/ directory when used locally. Later enriched subfolder outputs have not yet been incorporated.
+Keep the input folder outside the public repository. The source layout must contain `snapshots/snapshot_YYYY0101.parquet` and `outputs/GASTON_BELMONT/`, including the enriched map exports. `prepare_data.py` verifies exact agreement of annual arrival identifier sets with the enriched person export before writing public aggregates. It filters Parquet columns and rows so statewide records do not become app inputs.
+
+Streamlit Community Cloud uses `app.py` at the repository root. Root CSV files are supported; a `data/` directory is also supported when all aggregate inputs are placed there.
+
+## Definitions
+
+Population: `county_desc = GASTON`, `municipality_desc = BELMONT`, and `status_cd != R`. This includes non-removed statuses, including inactive registrations. A Belmont mailing city does not define inclusion.
+
+Arrivals and departures are NC identifier set differences between consecutive January 1 Belmont snapshots. Starting voters minus departures equals retained voters; retained plus arrivals equals ending voters. Counts describe registration membership changes and are not population migration estimates. Repeat arrivals are events; unique arrivals are calculated separately for each selected year range.
+
+The full period contains 14,499 arrival events among 14,330 distinct people, 9,153 departure events and a net increase of 5,346 registrations. The electorate rises from 7,711 to 13,057. Enriched origins cover 10,293 events (71.0%), compared with 9,998 in the original export.
+
+Observed prior registrations, historical NC registration/voting clues and inferred birthplace state proxies remain separate. None proves the immediately previous residence. Maps use supplied county/state centroids, not residential coordinates. Departure locations are current NC registration evidence from the ending snapshot; absent and removed-only records are not assumed interstate moves.
+
+Arrival profile fields use the ending snapshot, departure profiles use the starting snapshot. Invalid ages outside 16–110 remain visible in an unknown group. Ending-electorate stocks are viewed one snapshot at a time. Party/demographic codes are reported as supplied, with no political conclusions inferred.
+
+Cohort endpoint presence can rise after re-entry; continuous observed presence can only decline. Annual snapshots cannot detect between-snapshot changes. The 2026 composition assigns each current voter to their latest observed registration spell, or Before 2016 if no subsequent re-entry is observed.
+
+## Data quality
+
+`cohort_summary.csv` reports 8,634 arrivals for 2016, which is the ending electorate stock. It is superseded: snapshot identifier sets, validation exports and the enriched person export agree on 1,740 arrivals. The app uses the reconciled count. Original aggregate files remain available for comparison but are not the primary source for current charts.
+
+The source inventory records filenames, sizes, hashes and roles. Files were obtained and aggregate tables generated October 3, 2026. Stored snapshot dates match January 1 filenames. The original raw extraction pipeline is not included in the Drive folder.

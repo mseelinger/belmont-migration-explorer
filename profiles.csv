@@ -1,0 +1,1045 @@
+year,population,dimension,category,events
+2016,Arrivals,Origin classification,FIRST_TIME_VOTER,141
+2016,Arrivals,Origin classification,FOREIGN_OTHER,24
+2016,Arrivals,Origin classification,INTRASTATE,956
+2016,Arrivals,Origin classification,INTRASTATE_HISTORY,53
+2016,Arrivals,Origin classification,LIKELY_INTERSTATE,225
+2016,Arrivals,Origin classification,UNKNOWN,341
+2017,Arrivals,Origin classification,FIRST_TIME_VOTER,82
+2017,Arrivals,Origin classification,FOREIGN_OTHER,13
+2017,Arrivals,Origin classification,INTRASTATE,446
+2017,Arrivals,Origin classification,INTRASTATE_HISTORY,7
+2017,Arrivals,Origin classification,LIKELY_INTERSTATE,144
+2017,Arrivals,Origin classification,UNKNOWN,100
+2018,Arrivals,Origin classification,FIRST_TIME_VOTER,172
+2018,Arrivals,Origin classification,FOREIGN_OTHER,24
+2018,Arrivals,Origin classification,INTRASTATE,733
+2018,Arrivals,Origin classification,INTRASTATE_HISTORY,40
+2018,Arrivals,Origin classification,LIKELY_INTERSTATE,205
+2018,Arrivals,Origin classification,UNKNOWN,182
+2019,Arrivals,Origin classification,FIRST_TIME_VOTER,141
+2019,Arrivals,Origin classification,FOREIGN_OTHER,22
+2019,Arrivals,Origin classification,INTRASTATE,628
+2019,Arrivals,Origin classification,INTRASTATE_HISTORY,6
+2019,Arrivals,Origin classification,LIKELY_INTERSTATE,225
+2019,Arrivals,Origin classification,UNKNOWN,187
+2020,Arrivals,Origin classification,FIRST_TIME_VOTER,186
+2020,Arrivals,Origin classification,FOREIGN_OTHER,24
+2020,Arrivals,Origin classification,INTRASTATE,1157
+2020,Arrivals,Origin classification,INTRASTATE_HISTORY,118
+2020,Arrivals,Origin classification,LIKELY_INTERSTATE,259
+2020,Arrivals,Origin classification,UNKNOWN,541
+2021,Arrivals,Origin classification,FIRST_TIME_VOTER,156
+2021,Arrivals,Origin classification,FOREIGN_OTHER,25
+2021,Arrivals,Origin classification,INTRASTATE,640
+2021,Arrivals,Origin classification,INTRASTATE_HISTORY,7
+2021,Arrivals,Origin classification,LIKELY_INTERSTATE,192
+2021,Arrivals,Origin classification,UNKNOWN,140
+2022,Arrivals,Origin classification,FIRST_TIME_VOTER,159
+2022,Arrivals,Origin classification,FOREIGN_OTHER,22
+2022,Arrivals,Origin classification,INTRASTATE,778
+2022,Arrivals,Origin classification,INTRASTATE_HISTORY,25
+2022,Arrivals,Origin classification,LIKELY_INTERSTATE,294
+2022,Arrivals,Origin classification,PRIOR_NC_HISTORY_UNRESOLVED,2
+2022,Arrivals,Origin classification,UNKNOWN,173
+2023,Arrivals,Origin classification,FIRST_TIME_VOTER,164
+2023,Arrivals,Origin classification,FOREIGN_OTHER,26
+2023,Arrivals,Origin classification,INTRASTATE,569
+2023,Arrivals,Origin classification,INTRASTATE_HISTORY,7
+2023,Arrivals,Origin classification,LIKELY_INTERSTATE,251
+2023,Arrivals,Origin classification,PRIOR_NC_HISTORY_UNRESOLVED,1
+2023,Arrivals,Origin classification,UNKNOWN,154
+2024,Arrivals,Origin classification,FIRST_TIME_VOTER,187
+2024,Arrivals,Origin classification,FOREIGN_OTHER,18
+2024,Arrivals,Origin classification,INTRASTATE,1064
+2024,Arrivals,Origin classification,INTRASTATE_HISTORY,34
+2024,Arrivals,Origin classification,LIKELY_INTERSTATE,287
+2024,Arrivals,Origin classification,PRIOR_NC_HISTORY_UNRESOLVED,1
+2024,Arrivals,Origin classification,UNKNOWN,455
+2025,Arrivals,Origin classification,FIRST_TIME_VOTER,142
+2025,Arrivals,Origin classification,FOREIGN_OTHER,20
+2025,Arrivals,Origin classification,INTRASTATE,632
+2025,Arrivals,Origin classification,INTRASTATE_HISTORY,6
+2025,Arrivals,Origin classification,LIKELY_INTERSTATE,305
+2025,Arrivals,Origin classification,UNKNOWN,181
+2016,Arrivals,Origin resolution,FOREIGN_OTHER,24
+2016,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,1234
+2016,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,141
+2016,Arrivals,Origin resolution,UNRESOLVED,341
+2017,Arrivals,Origin resolution,FOREIGN_OTHER,13
+2017,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,597
+2017,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,82
+2017,Arrivals,Origin resolution,UNRESOLVED,100
+2018,Arrivals,Origin resolution,FOREIGN_OTHER,24
+2018,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,978
+2018,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,172
+2018,Arrivals,Origin resolution,UNRESOLVED,182
+2019,Arrivals,Origin resolution,FOREIGN_OTHER,22
+2019,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,859
+2019,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,141
+2019,Arrivals,Origin resolution,UNRESOLVED,187
+2020,Arrivals,Origin resolution,FOREIGN_OTHER,24
+2020,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,1534
+2020,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,186
+2020,Arrivals,Origin resolution,UNRESOLVED,541
+2021,Arrivals,Origin resolution,FOREIGN_OTHER,25
+2021,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,839
+2021,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,156
+2021,Arrivals,Origin resolution,UNRESOLVED,140
+2022,Arrivals,Origin resolution,FOREIGN_OTHER,22
+2022,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,1097
+2022,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,159
+2022,Arrivals,Origin resolution,UNRESOLVED,175
+2023,Arrivals,Origin resolution,FOREIGN_OTHER,26
+2023,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,827
+2023,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,164
+2023,Arrivals,Origin resolution,UNRESOLVED,155
+2024,Arrivals,Origin resolution,FOREIGN_OTHER,18
+2024,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,1385
+2024,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,187
+2024,Arrivals,Origin resolution,UNRESOLVED,456
+2025,Arrivals,Origin resolution,FOREIGN_OTHER,20
+2025,Arrivals,Origin resolution,GEOGRAPHIC_ORIGIN_ASSIGNED,943
+2025,Arrivals,Origin resolution,LIKELY_FIRST_TIME_VOTER,142
+2025,Arrivals,Origin resolution,UNRESOLVED,181
+2016,Arrivals,Registration timing,DURING_COHORT,1264
+2016,Arrivals,Registration timing,PREDATES_COHORT,476
+2017,Arrivals,Registration timing,DURING_COHORT,512
+2017,Arrivals,Registration timing,PREDATES_COHORT,280
+2018,Arrivals,Registration timing,DURING_COHORT,951
+2018,Arrivals,Registration timing,PREDATES_COHORT,405
+2019,Arrivals,Registration timing,DURING_COHORT,895
+2019,Arrivals,Registration timing,PREDATES_COHORT,314
+2020,Arrivals,Registration timing,DURING_COHORT,1780
+2020,Arrivals,Registration timing,PREDATES_COHORT,505
+2021,Arrivals,Registration timing,DURING_COHORT,920
+2021,Arrivals,Registration timing,PREDATES_COHORT,240
+2022,Arrivals,Registration timing,DURING_COHORT,1154
+2022,Arrivals,Registration timing,PREDATES_COHORT,299
+2023,Arrivals,Registration timing,DURING_COHORT,954
+2023,Arrivals,Registration timing,PREDATES_COHORT,218
+2024,Arrivals,Registration timing,DURING_COHORT,1619
+2024,Arrivals,Registration timing,PREDATES_COHORT,427
+2025,Arrivals,Registration timing,DURING_COHORT,1026
+2025,Arrivals,Registration timing,PREDATES_COHORT,260
+2016,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,661
+2016,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,956
+2016,Arrivals,Prior NC snapshot,REMOVED_ONLY,123
+2017,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,304
+2017,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,446
+2017,Arrivals,Prior NC snapshot,REMOVED_ONLY,42
+2018,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,543
+2018,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,733
+2018,Arrivals,Prior NC snapshot,REMOVED_ONLY,80
+2019,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,525
+2019,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,628
+2019,Arrivals,Prior NC snapshot,REMOVED_ONLY,56
+2020,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,894
+2020,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,1157
+2020,Arrivals,Prior NC snapshot,REMOVED_ONLY,234
+2021,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,464
+2021,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,640
+2021,Arrivals,Prior NC snapshot,REMOVED_ONLY,56
+2022,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,607
+2022,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,778
+2022,Arrivals,Prior NC snapshot,REMOVED_ONLY,68
+2023,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,545
+2023,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,569
+2023,Arrivals,Prior NC snapshot,REMOVED_ONLY,58
+2024,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,845
+2024,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,1064
+2024,Arrivals,Prior NC snapshot,REMOVED_ONLY,137
+2025,Arrivals,Prior NC snapshot,COMPLETELY_ABSENT,590
+2025,Arrivals,Prior NC snapshot,CURRENT_ELSEWHERE_NC,632
+2025,Arrivals,Prior NC snapshot,REMOVED_ONLY,64
+2016,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,956
+2016,Arrivals,Detailed evidence,FOREIGN_OTHER,24
+2016,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,141
+2016,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,83
+2016,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,70
+2016,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,225
+2016,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,53
+2016,Arrivals,Detailed evidence,UNCERTAIN,112
+2016,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,76
+2017,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,446
+2017,Arrivals,Detailed evidence,FOREIGN_OTHER,13
+2017,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,82
+2017,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,28
+2017,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,37
+2017,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,144
+2017,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,2
+2017,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,5
+2017,Arrivals,Detailed evidence,UNCERTAIN,16
+2017,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,19
+2018,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,733
+2018,Arrivals,Detailed evidence,FOREIGN_OTHER,24
+2018,Arrivals,Detailed evidence,INTERSTATE_PROXY_REPLACED_BY_NC_HISTORY,3
+2018,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,172
+2018,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,41
+2018,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,46
+2018,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,205
+2018,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,3
+2018,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,34
+2018,Arrivals,Detailed evidence,UNCERTAIN,44
+2018,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,51
+2019,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,628
+2019,Arrivals,Detailed evidence,FOREIGN_OTHER,22
+2019,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,141
+2019,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,44
+2019,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,50
+2019,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,225
+2019,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,6
+2019,Arrivals,Detailed evidence,UNCERTAIN,51
+2019,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,42
+2020,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,1157
+2020,Arrivals,Detailed evidence,FOREIGN_OTHER,24
+2020,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,186
+2020,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,55
+2020,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,122
+2020,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,259
+2020,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,6
+2020,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,112
+2020,Arrivals,Detailed evidence,UNCERTAIN,267
+2020,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,97
+2021,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,640
+2021,Arrivals,Detailed evidence,FOREIGN_OTHER,25
+2021,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,156
+2021,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,25
+2021,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,50
+2021,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,192
+2021,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,1
+2021,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,6
+2021,Arrivals,Detailed evidence,UNCERTAIN,38
+2021,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,27
+2022,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,778
+2022,Arrivals,Detailed evidence,FOREIGN_OTHER,22
+2022,Arrivals,Detailed evidence,INTERSTATE_PROXY_CONFLICTS_WITH_NC_HISTORY,2
+2022,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,159
+2022,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,37
+2022,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,45
+2022,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,294
+2022,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,2
+2022,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,23
+2022,Arrivals,Detailed evidence,UNCERTAIN,62
+2022,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,29
+2023,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,569
+2023,Arrivals,Detailed evidence,FOREIGN_OTHER,26
+2023,Arrivals,Detailed evidence,INTERSTATE_PROXY_CONFLICTS_WITH_NC_HISTORY,1
+2023,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,164
+2023,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,14
+2023,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,52
+2023,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,251
+2023,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,2
+2023,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,5
+2023,Arrivals,Detailed evidence,UNCERTAIN,51
+2023,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,37
+2024,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,1064
+2024,Arrivals,Detailed evidence,FOREIGN_OTHER,18
+2024,Arrivals,Detailed evidence,INTERSTATE_PROXY_CONFLICTS_WITH_NC_HISTORY,1
+2024,Arrivals,Detailed evidence,INTERSTATE_PROXY_REPLACED_BY_NC_HISTORY,1
+2024,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,187
+2024,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,20
+2024,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,104
+2024,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,287
+2024,Arrivals,Detailed evidence,RECENT_NC_VOTING_ORIGIN,2
+2024,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,31
+2024,Arrivals,Detailed evidence,UNCERTAIN,248
+2024,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,83
+2025,Arrivals,Detailed evidence,CONFIRMED_INTRASTATE,632
+2025,Arrivals,Detailed evidence,FOREIGN_OTHER,20
+2025,Arrivals,Detailed evidence,LIKELY_FIRST_TIME_VOTER,142
+2025,Arrivals,Detailed evidence,POSSIBLE_RETURN_MIGRANT,13
+2025,Arrivals,Detailed evidence,PRIOR_NC_REMOVED_RECORD,58
+2025,Arrivals,Detailed evidence,PROBABLE_INTERSTATE_NO_PRIOR_NC_HISTORY,305
+2025,Arrivals,Detailed evidence,RECENT_REMOVED_NC_ORIGIN,6
+2025,Arrivals,Detailed evidence,UNCERTAIN,76
+2025,Arrivals,Detailed evidence,YOUNG_NEW_OR_UNCERTAIN,34
+2016,Arrivals,Age,16–24,295
+2016,Arrivals,Age,25–34,486
+2016,Arrivals,Age,35–44,335
+2016,Arrivals,Age,45–54,289
+2016,Arrivals,Age,55–64,181
+2016,Arrivals,Age,65+,154
+2017,Arrivals,Age,16–24,130
+2017,Arrivals,Age,25–34,189
+2017,Arrivals,Age,35–44,125
+2017,Arrivals,Age,45–54,112
+2017,Arrivals,Age,55–64,113
+2017,Arrivals,Age,65+,123
+2018,Arrivals,Age,16–24,264
+2018,Arrivals,Age,25–34,362
+2018,Arrivals,Age,35–44,220
+2018,Arrivals,Age,45–54,182
+2018,Arrivals,Age,55–64,172
+2018,Arrivals,Age,65+,156
+2019,Arrivals,Age,16–24,231
+2019,Arrivals,Age,25–34,291
+2019,Arrivals,Age,35–44,194
+2019,Arrivals,Age,45–54,203
+2019,Arrivals,Age,55–64,163
+2019,Arrivals,Age,65+,127
+2020,Arrivals,Age,16–24,397
+2020,Arrivals,Age,25–34,574
+2020,Arrivals,Age,35–44,412
+2020,Arrivals,Age,45–54,346
+2020,Arrivals,Age,55–64,316
+2020,Arrivals,Age,65+,240
+2021,Arrivals,Age,16–24,230
+2021,Arrivals,Age,25–34,280
+2021,Arrivals,Age,35–44,206
+2021,Arrivals,Age,45–54,166
+2021,Arrivals,Age,55–64,124
+2021,Arrivals,Age,65+,153
+2021,Arrivals,Age,Unknown / invalid,1
+2022,Arrivals,Age,16–24,239
+2022,Arrivals,Age,25–34,366
+2022,Arrivals,Age,35–44,275
+2022,Arrivals,Age,45–54,197
+2022,Arrivals,Age,55–64,169
+2022,Arrivals,Age,65+,207
+2023,Arrivals,Age,16–24,243
+2023,Arrivals,Age,25–34,315
+2023,Arrivals,Age,35–44,199
+2023,Arrivals,Age,45–54,134
+2023,Arrivals,Age,55–64,125
+2023,Arrivals,Age,65+,154
+2023,Arrivals,Age,Unknown / invalid,2
+2024,Arrivals,Age,16–24,409
+2024,Arrivals,Age,25–34,599
+2024,Arrivals,Age,35–44,365
+2024,Arrivals,Age,45–54,261
+2024,Arrivals,Age,55–64,211
+2024,Arrivals,Age,65+,201
+2025,Arrivals,Age,16–24,218
+2025,Arrivals,Age,25–34,276
+2025,Arrivals,Age,35–44,192
+2025,Arrivals,Age,45–54,146
+2025,Arrivals,Age,55–64,223
+2025,Arrivals,Age,65+,230
+2025,Arrivals,Age,Unknown / invalid,1
+2016,Arrivals,Party,UNA,695
+2016,Arrivals,Party,REP,678
+2016,Arrivals,Party,DEM,358
+2016,Arrivals,Party,LIB,9
+2016,Arrivals,Precinct,BELMONT #1,726
+2016,Arrivals,Precinct,BELMONT #2,465
+2016,Arrivals,Precinct,SOUTH POINT,397
+2016,Arrivals,Precinct,BELMONT #3,152
+2016,Arrivals,Sex code,F,893
+2016,Arrivals,Sex code,M,754
+2016,Arrivals,Sex code,U,93
+2016,Arrivals,Race code,W,1366
+2016,Arrivals,Race code,B,146
+2016,Arrivals,Race code,U,142
+2016,Arrivals,Race code,A,43
+2016,Arrivals,Race code,O,29
+2016,Arrivals,Race code,M,11
+2016,Arrivals,Race code,I,3
+2016,Departures,Party,REP,320
+2016,Departures,Party,UNA,279
+2016,Departures,Party,DEM,210
+2016,Departures,Party,LIB,8
+2016,Departures,Precinct,BELMONT #1,339
+2016,Departures,Precinct,BELMONT #2,266
+2016,Departures,Precinct,SOUTH POINT,136
+2016,Departures,Precinct,BELMONT #3,76
+2016,Departures,Sex code,F,455
+2016,Departures,Sex code,M,338
+2016,Departures,Sex code,U,24
+2016,Departures,Race code,W,664
+2016,Departures,Race code,B,98
+2016,Departures,Race code,U,26
+2016,Departures,Race code,O,14
+2016,Departures,Race code,A,11
+2016,Departures,Race code,I,2
+2016,Departures,Race code,M,2
+2016,Departures,Age,25–34,203
+2016,Departures,Age,35–44,177
+2016,Departures,Age,45–54,141
+2016,Departures,Age,16–24,106
+2016,Departures,Age,55–64,102
+2016,Departures,Age,65+,87
+2016,Departures,Age,Unknown / invalid,1
+2016,Ending electorate,Party,REP,3412
+2016,Ending electorate,Party,UNA,2810
+2016,Ending electorate,Party,DEM,2379
+2016,Ending electorate,Party,LIB,33
+2016,Ending electorate,Precinct,BELMONT #1,3371
+2016,Ending electorate,Precinct,BELMONT #2,2450
+2016,Ending electorate,Precinct,SOUTH POINT,2068
+2016,Ending electorate,Precinct,BELMONT #3,745
+2016,Ending electorate,Sex code,F,4529
+2016,Ending electorate,Sex code,M,3884
+2016,Ending electorate,Sex code,U,221
+2016,Ending electorate,Race code,W,7206
+2016,Ending electorate,Race code,B,732
+2016,Ending electorate,Race code,U,324
+2016,Ending electorate,Race code,A,168
+2016,Ending electorate,Race code,O,139
+2016,Ending electorate,Race code,M,46
+2016,Ending electorate,Race code,I,19
+2016,Ending electorate,Age,45–54,1718
+2016,Ending electorate,Age,35–44,1657
+2016,Ending electorate,Age,65+,1626
+2016,Ending electorate,Age,25–34,1479
+2016,Ending electorate,Age,55–64,1388
+2016,Ending electorate,Age,16–24,766
+2017,Arrivals,Party,UNA,301
+2017,Arrivals,Party,REP,287
+2017,Arrivals,Party,DEM,196
+2017,Arrivals,Party,LIB,8
+2017,Arrivals,Precinct,BELMONT #1,245
+2017,Arrivals,Precinct,BELMONT #2,216
+2017,Arrivals,Precinct,BELMONT #3,155
+2017,Arrivals,Precinct,SOUTH POINT,146
+2017,Arrivals,Precinct,NEW HOPE,30
+2017,Arrivals,Sex code,F,438
+2017,Arrivals,Sex code,M,334
+2017,Arrivals,Sex code,U,20
+2017,Arrivals,Race code,W,598
+2017,Arrivals,Race code,B,120
+2017,Arrivals,Race code,O,29
+2017,Arrivals,Race code,U,27
+2017,Arrivals,Race code,A,13
+2017,Arrivals,Race code,M,3
+2017,Arrivals,Race code,I,2
+2017,Departures,Party,REP,235
+2017,Departures,Party,DEM,215
+2017,Departures,Party,UNA,213
+2017,Departures,Party,LIB,2
+2017,Departures,Precinct,BELMONT #1,270
+2017,Departures,Precinct,BELMONT #2,219
+2017,Departures,Precinct,SOUTH POINT,119
+2017,Departures,Precinct,BELMONT #3,57
+2017,Departures,Sex code,F,350
+2017,Departures,Sex code,M,303
+2017,Departures,Sex code,U,12
+2017,Departures,Race code,W,551
+2017,Departures,Race code,B,62
+2017,Departures,Race code,U,24
+2017,Departures,Race code,M,10
+2017,Departures,Race code,O,8
+2017,Departures,Race code,A,8
+2017,Departures,Race code,I,2
+2017,Departures,Age,25–34,151
+2017,Departures,Age,65+,130
+2017,Departures,Age,35–44,120
+2017,Departures,Age,45–54,115
+2017,Departures,Age,55–64,89
+2017,Departures,Age,16–24,60
+2017,Ending electorate,Party,REP,3458
+2017,Ending electorate,Party,UNA,2903
+2017,Ending electorate,Party,DEM,2360
+2017,Ending electorate,Party,LIB,40
+2017,Ending electorate,Precinct,BELMONT #1,3354
+2017,Ending electorate,Precinct,BELMONT #2,2429
+2017,Ending electorate,Precinct,SOUTH POINT,2103
+2017,Ending electorate,Precinct,BELMONT #3,843
+2017,Ending electorate,Precinct,NEW HOPE,32
+2017,Ending electorate,Sex code,F,4617
+2017,Ending electorate,Sex code,M,3917
+2017,Ending electorate,Sex code,U,227
+2017,Ending electorate,Race code,W,7256
+2017,Ending electorate,Race code,B,789
+2017,Ending electorate,Race code,U,324
+2017,Ending electorate,Race code,A,173
+2017,Ending electorate,Race code,O,161
+2017,Ending electorate,Race code,M,39
+2017,Ending electorate,Race code,I,19
+2017,Ending electorate,Age,45–54,1733
+2017,Ending electorate,Age,65+,1716
+2017,Ending electorate,Age,35–44,1651
+2017,Ending electorate,Age,25–34,1474
+2017,Ending electorate,Age,55–64,1465
+2017,Ending electorate,Age,16–24,722
+2018,Arrivals,Party,UNA,557
+2018,Arrivals,Party,REP,459
+2018,Arrivals,Party,DEM,323
+2018,Arrivals,Party,LIB,15
+2018,Arrivals,Party,CST,1
+2018,Arrivals,Party,GRE,1
+2018,Arrivals,Precinct,BELMONT #1,474
+2018,Arrivals,Precinct,BELMONT #2,338
+2018,Arrivals,Precinct,SOUTH POINT,278
+2018,Arrivals,Precinct,NEW HOPE,155
+2018,Arrivals,Precinct,BELMONT #3,111
+2018,Arrivals,Sex code,F,635
+2018,Arrivals,Sex code,M,586
+2018,Arrivals,Sex code,U,135
+2018,Arrivals,Race code,W,995
+2018,Arrivals,Race code,U,159
+2018,Arrivals,Race code,B,130
+2018,Arrivals,Race code,O,36
+2018,Arrivals,Race code,A,28
+2018,Arrivals,Race code,M,6
+2018,Arrivals,Race code,I,2
+2018,Departures,Party,UNA,247
+2018,Departures,Party,REP,245
+2018,Departures,Party,DEM,171
+2018,Departures,Party,LIB,2
+2018,Departures,Precinct,BELMONT #1,238
+2018,Departures,Precinct,BELMONT #2,219
+2018,Departures,Precinct,SOUTH POINT,137
+2018,Departures,Precinct,BELMONT #3,70
+2018,Departures,Precinct,NEW HOPE,1
+2018,Departures,Sex code,F,353
+2018,Departures,Sex code,M,291
+2018,Departures,Sex code,U,21
+2018,Departures,Race code,W,548
+2018,Departures,Race code,B,68
+2018,Departures,Race code,U,28
+2018,Departures,Race code,A,15
+2018,Departures,Race code,O,4
+2018,Departures,Race code,I,1
+2018,Departures,Race code,M,1
+2018,Departures,Age,25–34,152
+2018,Departures,Age,65+,132
+2018,Departures,Age,45–54,112
+2018,Departures,Age,35–44,105
+2018,Departures,Age,55–64,90
+2018,Departures,Age,16–24,74
+2018,Ending electorate,Party,REP,3675
+2018,Ending electorate,Party,UNA,3222
+2018,Ending electorate,Party,DEM,2499
+2018,Ending electorate,Party,LIB,54
+2018,Ending electorate,Party,GRE,1
+2018,Ending electorate,Party,CST,1
+2018,Ending electorate,Precinct,BELMONT #1,3586
+2018,Ending electorate,Precinct,BELMONT #2,2545
+2018,Ending electorate,Precinct,SOUTH POINT,2238
+2018,Ending electorate,Precinct,BELMONT #3,886
+2018,Ending electorate,Precinct,NEW HOPE,197
+2018,Ending electorate,Sex code,F,4901
+2018,Ending electorate,Sex code,M,4215
+2018,Ending electorate,Sex code,U,336
+2018,Ending electorate,Race code,W,7713
+2018,Ending electorate,Race code,B,850
+2018,Ending electorate,Race code,U,449
+2018,Ending electorate,Race code,O,190
+2018,Ending electorate,Race code,A,186
+2018,Ending electorate,Race code,M,44
+2018,Ending electorate,Race code,I,20
+2018,Ending electorate,Age,65+,1882
+2018,Ending electorate,Age,45–54,1816
+2018,Ending electorate,Age,35–44,1742
+2018,Ending electorate,Age,25–34,1663
+2018,Ending electorate,Age,55–64,1554
+2018,Ending electorate,Age,16–24,795
+2019,Arrivals,Party,UNA,496
+2019,Arrivals,Party,REP,422
+2019,Arrivals,Party,DEM,276
+2019,Arrivals,Party,LIB,13
+2019,Arrivals,Party,GRE,1
+2019,Arrivals,Party,CST,1
+2019,Arrivals,Precinct,BELMONT #2,370
+2019,Arrivals,Precinct,BELMONT #1,339
+2019,Arrivals,Precinct,SOUTH POINT,264
+2019,Arrivals,Precinct,NEW HOPE,166
+2019,Arrivals,Precinct,BELMONT #3,70
+2019,Arrivals,Sex code,F,555
+2019,Arrivals,Sex code,M,452
+2019,Arrivals,Sex code,U,202
+2019,Arrivals,Race code,W,827
+2019,Arrivals,Race code,U,223
+2019,Arrivals,Race code,B,111
+2019,Arrivals,Race code,O,28
+2019,Arrivals,Race code,A,17
+2019,Arrivals,Race code,M,2
+2019,Arrivals,Race code,I,1
+2019,Departures,Party,UNA,481
+2019,Departures,Party,REP,463
+2019,Departures,Party,DEM,398
+2019,Departures,Party,LIB,10
+2019,Departures,Precinct,BELMONT #1,526
+2019,Departures,Precinct,BELMONT #2,437
+2019,Departures,Precinct,SOUTH POINT,240
+2019,Departures,Precinct,BELMONT #3,145
+2019,Departures,Precinct,NEW HOPE,4
+2019,Departures,Sex code,F,720
+2019,Departures,Sex code,M,595
+2019,Departures,Sex code,U,37
+2019,Departures,Race code,W,1120
+2019,Departures,Race code,B,122
+2019,Departures,Race code,U,43
+2019,Departures,Race code,A,28
+2019,Departures,Race code,O,26
+2019,Departures,Race code,M,7
+2019,Departures,Race code,I,6
+2019,Departures,Age,25–34,338
+2019,Departures,Age,45–54,250
+2019,Departures,Age,35–44,247
+2019,Departures,Age,65+,236
+2019,Departures,Age,55–64,202
+2019,Departures,Age,16–24,79
+2019,Ending electorate,Party,REP,3637
+2019,Ending electorate,Party,UNA,3250
+2019,Ending electorate,Party,DEM,2359
+2019,Ending electorate,Party,LIB,59
+2019,Ending electorate,Party,CST,2
+2019,Ending electorate,Party,GRE,2
+2019,Ending electorate,Precinct,BELMONT #1,3390
+2019,Ending electorate,Precinct,BELMONT #2,2471
+2019,Ending electorate,Precinct,SOUTH POINT,2270
+2019,Ending electorate,Precinct,BELMONT #3,814
+2019,Ending electorate,Precinct,NEW HOPE,364
+2019,Ending electorate,Sex code,F,4734
+2019,Ending electorate,Sex code,M,4075
+2019,Ending electorate,Sex code,U,500
+2019,Ending electorate,Race code,W,7415
+2019,Ending electorate,Race code,B,838
+2019,Ending electorate,Race code,U,631
+2019,Ending electorate,Race code,O,196
+2019,Ending electorate,Race code,A,175
+2019,Ending electorate,Race code,M,38
+2019,Ending electorate,Race code,I,16
+2019,Ending electorate,Age,65+,1904
+2019,Ending electorate,Age,45–54,1772
+2019,Ending electorate,Age,35–44,1689
+2019,Ending electorate,Age,25–34,1567
+2019,Ending electorate,Age,55–64,1535
+2019,Ending electorate,Age,16–24,842
+2020,Arrivals,Party,REP,856
+2020,Arrivals,Party,UNA,843
+2020,Arrivals,Party,DEM,543
+2020,Arrivals,Party,LIB,29
+2020,Arrivals,Party,GRE,8
+2020,Arrivals,Party,CST,6
+2020,Arrivals,Precinct,BELMONT #2,697
+2020,Arrivals,Precinct,BELMONT #1,666
+2020,Arrivals,Precinct,SOUTH POINT,480
+2020,Arrivals,Precinct,NEW HOPE,277
+2020,Arrivals,Precinct,BELMONT #3,165
+2020,Arrivals,Sex code,F,842
+2020,Arrivals,Sex code,M,773
+2020,Arrivals,Sex code,U,670
+2020,Arrivals,Race code,W,1290
+2020,Arrivals,Race code,U,716
+2020,Arrivals,Race code,B,186
+2020,Arrivals,Race code,O,40
+2020,Arrivals,Race code,A,34
+2020,Arrivals,Race code,M,14
+2020,Arrivals,Race code,I,4
+2020,Arrivals,Race code,P,1
+2020,Departures,Party,REP,351
+2020,Departures,Party,UNA,330
+2020,Departures,Party,DEM,255
+2020,Departures,Party,LIB,11
+2020,Departures,Party,CST,1
+2020,Departures,Party,GRE,1
+2020,Departures,Precinct,BELMONT #1,369
+2020,Departures,Precinct,BELMONT #2,320
+2020,Departures,Precinct,SOUTH POINT,161
+2020,Departures,Precinct,BELMONT #3,87
+2020,Departures,Precinct,NEW HOPE,12
+2020,Departures,Sex code,F,473
+2020,Departures,Sex code,M,427
+2020,Departures,Sex code,U,49
+2020,Departures,Race code,W,730
+2020,Departures,Race code,B,113
+2020,Departures,Race code,U,72
+2020,Departures,Race code,O,14
+2020,Departures,Race code,A,14
+2020,Departures,Race code,M,5
+2020,Departures,Race code,I,1
+2020,Departures,Age,25–34,249
+2020,Departures,Age,35–44,167
+2020,Departures,Age,45–54,158
+2020,Departures,Age,65+,158
+2020,Departures,Age,16–24,120
+2020,Departures,Age,55–64,97
+2020,Ending electorate,Party,REP,4152
+2020,Ending electorate,Party,UNA,3753
+2020,Ending electorate,Party,DEM,2639
+2020,Ending electorate,Party,LIB,84
+2020,Ending electorate,Party,GRE,9
+2020,Ending electorate,Party,CST,8
+2020,Ending electorate,Precinct,BELMONT #1,3659
+2020,Ending electorate,Precinct,BELMONT #2,2843
+2020,Ending electorate,Precinct,SOUTH POINT,2602
+2020,Ending electorate,Precinct,BELMONT #3,885
+2020,Ending electorate,Precinct,NEW HOPE,656
+2020,Ending electorate,Sex code,F,5112
+2020,Ending electorate,Sex code,M,4421
+2020,Ending electorate,Sex code,U,1112
+2020,Ending electorate,Race code,W,7979
+2020,Ending electorate,Race code,U,1267
+2020,Ending electorate,Race code,B,913
+2020,Ending electorate,Race code,O,221
+2020,Ending electorate,Race code,A,198
+2020,Ending electorate,Race code,M,48
+2020,Ending electorate,Race code,I,18
+2020,Ending electorate,Race code,P,1
+2020,Ending electorate,Age,65+,2114
+2020,Ending electorate,Age,35–44,1950
+2020,Ending electorate,Age,45–54,1948
+2020,Ending electorate,Age,25–34,1847
+2020,Ending electorate,Age,55–64,1777
+2020,Ending electorate,Age,16–24,1009
+2021,Arrivals,Party,UNA,508
+2021,Arrivals,Party,REP,390
+2021,Arrivals,Party,DEM,245
+2021,Arrivals,Party,LIB,17
+2021,Arrivals,Precinct,SOUTH POINT,323
+2021,Arrivals,Precinct,BELMONT #1,322
+2021,Arrivals,Precinct,BELMONT #2,263
+2021,Arrivals,Precinct,NEW HOPE,195
+2021,Arrivals,Precinct,BELMONT #3,57
+2021,Arrivals,Sex code,F,551
+2021,Arrivals,Sex code,M,534
+2021,Arrivals,Sex code,U,75
+2021,Arrivals,Race code,W,908
+2021,Arrivals,Race code,B,109
+2021,Arrivals,Race code,U,81
+2021,Arrivals,Race code,O,42
+2021,Arrivals,Race code,A,15
+2021,Arrivals,Race code,M,3
+2021,Arrivals,Race code,I,2
+2021,Departures,Party,REP,355
+2021,Departures,Party,UNA,334
+2021,Departures,Party,DEM,231
+2021,Departures,Party,LIB,5
+2021,Departures,Precinct,BELMONT #1,330
+2021,Departures,Precinct,BELMONT #2,291
+2021,Departures,Precinct,SOUTH POINT,206
+2021,Departures,Precinct,BELMONT #3,79
+2021,Departures,Precinct,NEW HOPE,19
+2021,Departures,Sex code,F,456
+2021,Departures,Sex code,M,383
+2021,Departures,Sex code,U,86
+2021,Departures,Race code,W,700
+2021,Departures,Race code,U,90
+2021,Departures,Race code,B,79
+2021,Departures,Race code,A,22
+2021,Departures,Race code,O,21
+2021,Departures,Race code,M,10
+2021,Departures,Race code,I,3
+2021,Departures,Age,25–34,234
+2021,Departures,Age,65+,203
+2021,Departures,Age,35–44,156
+2021,Departures,Age,45–54,148
+2021,Departures,Age,55–64,109
+2021,Departures,Age,16–24,75
+2021,Ending electorate,Party,REP,4153
+2021,Ending electorate,Party,UNA,3988
+2021,Ending electorate,Party,DEM,2642
+2021,Ending electorate,Party,LIB,97
+2021,Ending electorate,Precinct,BELMONT #1,3656
+2021,Ending electorate,Precinct,BELMONT #2,2804
+2021,Ending electorate,Precinct,SOUTH POINT,2714
+2021,Ending electorate,Precinct,BELMONT #3,861
+2021,Ending electorate,Precinct,NEW HOPE,845
+2021,Ending electorate,Sex code,F,5371
+2021,Ending electorate,Sex code,M,4711
+2021,Ending electorate,Sex code,U,798
+2021,Ending electorate,Race code,W,8500
+2021,Ending electorate,Race code,B,965
+2021,Ending electorate,Race code,U,907
+2021,Ending electorate,Race code,O,253
+2021,Ending electorate,Race code,A,196
+2021,Ending electorate,Race code,M,41
+2021,Ending electorate,Race code,I,17
+2021,Ending electorate,Race code,P,1
+2021,Ending electorate,Age,65+,2222
+2021,Ending electorate,Age,35–44,2046
+2021,Ending electorate,Age,45–54,1947
+2021,Ending electorate,Age,25–34,1813
+2021,Ending electorate,Age,55–64,1810
+2021,Ending electorate,Age,16–24,1041
+2021,Ending electorate,Age,Unknown / invalid,1
+2022,Arrivals,Party,UNA,634
+2022,Arrivals,Party,REP,475
+2022,Arrivals,Party,DEM,327
+2022,Arrivals,Party,LIB,15
+2022,Arrivals,Party,GRE,2
+2022,Arrivals,Precinct,BELMONT #1,451
+2022,Arrivals,Precinct,BELMONT #2,341
+2022,Arrivals,Precinct,SOUTH POINT,334
+2022,Arrivals,Precinct,NEW HOPE,252
+2022,Arrivals,Precinct,BELMONT #3,75
+2022,Arrivals,Sex code,F,737
+2022,Arrivals,Sex code,M,624
+2022,Arrivals,Sex code,U,92
+2022,Arrivals,Race code,W,1133
+2022,Arrivals,Race code,B,151
+2022,Arrivals,Race code,U,81
+2022,Arrivals,Race code,O,54
+2022,Arrivals,Race code,A,21
+2022,Arrivals,Race code,M,7
+2022,Arrivals,Race code,I,6
+2022,Departures,Party,REP,290
+2022,Departures,Party,UNA,273
+2022,Departures,Party,DEM,191
+2022,Departures,Party,LIB,6
+2022,Departures,Precinct,BELMONT #2,275
+2022,Departures,Precinct,BELMONT #1,242
+2022,Departures,Precinct,SOUTH POINT,153
+2022,Departures,Precinct,BELMONT #3,57
+2022,Departures,Precinct,NEW HOPE,33
+2022,Departures,Sex code,F,367
+2022,Departures,Sex code,M,331
+2022,Departures,Sex code,U,62
+2022,Departures,Race code,W,603
+2022,Departures,Race code,U,66
+2022,Departures,Race code,B,64
+2022,Departures,Race code,O,10
+2022,Departures,Race code,A,9
+2022,Departures,Race code,M,6
+2022,Departures,Race code,I,2
+2022,Departures,Age,25–34,181
+2022,Departures,Age,65+,179
+2022,Departures,Age,45–54,124
+2022,Departures,Age,55–64,110
+2022,Departures,Age,35–44,101
+2022,Departures,Age,16–24,65
+2022,Ending electorate,Party,UNA,4384
+2022,Ending electorate,Party,REP,4351
+2022,Ending electorate,Party,DEM,2733
+2022,Ending electorate,Party,LIB,102
+2022,Ending electorate,Party,GRE,3
+2022,Ending electorate,Precinct,BELMONT #1,3866
+2022,Ending electorate,Precinct,SOUTH POINT,2891
+2022,Ending electorate,Precinct,BELMONT #2,2861
+2022,Ending electorate,Precinct,NEW HOPE,1078
+2022,Ending electorate,Precinct,BELMONT #3,877
+2022,Ending electorate,Sex code,F,5752
+2022,Ending electorate,Sex code,M,5008
+2022,Ending electorate,Sex code,U,813
+2022,Ending electorate,Race code,W,9048
+2022,Ending electorate,Race code,B,1052
+2022,Ending electorate,Race code,U,906
+2022,Ending electorate,Race code,O,298
+2022,Ending electorate,Race code,A,208
+2022,Ending electorate,Race code,M,39
+2022,Ending electorate,Race code,I,21
+2022,Ending electorate,Race code,P,1
+2022,Ending electorate,Age,65+,2397
+2022,Ending electorate,Age,35–44,2235
+2022,Ending electorate,Age,45–54,2039
+2022,Ending electorate,Age,25–34,1928
+2022,Ending electorate,Age,55–64,1891
+2022,Ending electorate,Age,16–24,1083
+2023,Arrivals,Party,UNA,502
+2023,Arrivals,Party,REP,409
+2023,Arrivals,Party,DEM,240
+2023,Arrivals,Party,NLB,13
+2023,Arrivals,Party,LIB,8
+2023,Arrivals,Precinct,BELMONT #2,335
+2023,Arrivals,Precinct,BELMONT #1,324
+2023,Arrivals,Precinct,SOUTH POINT,262
+2023,Arrivals,Precinct,NEW HOPE,196
+2023,Arrivals,Precinct,BELMONT #3,55
+2023,Arrivals,Sex code,F,592
+2023,Arrivals,Sex code,M,516
+2023,Arrivals,Sex code,U,64
+2023,Arrivals,Race code,W,924
+2023,Arrivals,Race code,B,115
+2023,Arrivals,Race code,O,58
+2023,Arrivals,Race code,U,41
+2023,Arrivals,Race code,A,30
+2023,Arrivals,Race code,M,4
+2023,Departures,Party,UNA,314
+2023,Departures,Party,REP,292
+2023,Departures,Party,DEM,172
+2023,Departures,Party,LIB,11
+2023,Departures,Precinct,BELMONT #1,286
+2023,Departures,Precinct,BELMONT #2,267
+2023,Departures,Precinct,SOUTH POINT,115
+2023,Departures,Precinct,BELMONT #3,82
+2023,Departures,Precinct,NEW HOPE,39
+2023,Departures,Sex code,F,387
+2023,Departures,Sex code,M,353
+2023,Departures,Sex code,U,49
+2023,Departures,Race code,W,615
+2023,Departures,Race code,B,77
+2023,Departures,Race code,U,54
+2023,Departures,Race code,O,24
+2023,Departures,Race code,A,15
+2023,Departures,Race code,I,2
+2023,Departures,Race code,M,2
+2023,Departures,Age,25–34,197
+2023,Departures,Age,65+,184
+2023,Departures,Age,35–44,129
+2023,Departures,Age,45–54,124
+2023,Departures,Age,55–64,90
+2023,Departures,Age,16–24,65
+2023,Ending electorate,Party,UNA,4592
+2023,Ending electorate,Party,REP,4462
+2023,Ending electorate,Party,DEM,2784
+2023,Ending electorate,Party,LIB,97
+2023,Ending electorate,Party,NLB,16
+2023,Ending electorate,Party,GRE,5
+2023,Ending electorate,Precinct,BELMONT #1,3919
+2023,Ending electorate,Precinct,SOUTH POINT,3014
+2023,Ending electorate,Precinct,BELMONT #2,2929
+2023,Ending electorate,Precinct,NEW HOPE,1245
+2023,Ending electorate,Precinct,BELMONT #3,849
+2023,Ending electorate,Sex code,F,5968
+2023,Ending electorate,Sex code,M,5174
+2023,Ending electorate,Sex code,U,814
+2023,Ending electorate,Race code,W,9373
+2023,Ending electorate,Race code,B,1091
+2023,Ending electorate,Race code,U,871
+2023,Ending electorate,Race code,O,339
+2023,Ending electorate,Race code,A,225
+2023,Ending electorate,Race code,M,38
+2023,Ending electorate,Race code,I,18
+2023,Ending electorate,Race code,P,1
+2023,Ending electorate,Age,65+,2535
+2023,Ending electorate,Age,35–44,2298
+2023,Ending electorate,Age,45–54,2069
+2023,Ending electorate,Age,25–34,1989
+2023,Ending electorate,Age,55–64,1938
+2023,Ending electorate,Age,16–24,1125
+2023,Ending electorate,Age,Unknown / invalid,2
+2024,Arrivals,Party,UNA,822
+2024,Arrivals,Party,REP,718
+2024,Arrivals,Party,DEM,463
+2024,Arrivals,Party,NLB,29
+2024,Arrivals,Party,LIB,10
+2024,Arrivals,Party,CST,2
+2024,Arrivals,Party,WTP,1
+2024,Arrivals,Party,GRE,1
+2024,Arrivals,Precinct,BELMONT #2,658
+2024,Arrivals,Precinct,BELMONT #1,538
+2024,Arrivals,Precinct,SOUTH POINT,410
+2024,Arrivals,Precinct,NEW HOPE,256
+2024,Arrivals,Precinct,BELMONT #3,184
+2024,Arrivals,Sex code,F,981
+2024,Arrivals,Sex code,M,870
+2024,Arrivals,Sex code,U,195
+2024,Arrivals,Race code,W,1470
+2024,Arrivals,Race code,B,233
+2024,Arrivals,Race code,U,183
+2024,Arrivals,Race code,O,98
+2024,Arrivals,Race code,A,45
+2024,Arrivals,Race code,I,8
+2024,Arrivals,Race code,M,6
+2024,Arrivals,Race code,P,3
+2024,Departures,Party,REP,446
+2024,Departures,Party,UNA,436
+2024,Departures,Party,DEM,276
+2024,Departures,Party,LIB,11
+2024,Departures,Party,NLB,2
+2024,Departures,Precinct,BELMONT #2,388
+2024,Departures,Precinct,BELMONT #1,383
+2024,Departures,Precinct,SOUTH POINT,229
+2024,Departures,Precinct,BELMONT #3,92
+2024,Departures,Precinct,NEW HOPE,79
+2024,Departures,Sex code,F,587
+2024,Departures,Sex code,M,488
+2024,Departures,Sex code,U,96
+2024,Departures,Race code,W,900
+2024,Departures,Race code,B,120
+2024,Departures,Race code,U,97
+2024,Departures,Race code,O,34
+2024,Departures,Race code,A,17
+2024,Departures,Race code,M,2
+2024,Departures,Race code,I,1
+2024,Departures,Age,25–34,316
+2024,Departures,Age,35–44,207
+2024,Departures,Age,65+,182
+2024,Departures,Age,16–24,168
+2024,Departures,Age,45–54,164
+2024,Departures,Age,55–64,134
+2024,Ending electorate,Party,UNA,4976
+2024,Ending electorate,Party,REP,4781
+2024,Ending electorate,Party,DEM,2918
+2024,Ending electorate,Party,LIB,94
+2024,Ending electorate,Party,NLB,52
+2024,Ending electorate,Party,GRE,6
+2024,Ending electorate,Party,WTP,2
+2024,Ending electorate,Party,CST,2
+2024,Ending electorate,Precinct,BELMONT #1,4077
+2024,Ending electorate,Precinct,SOUTH POINT,3195
+2024,Ending electorate,Precinct,BELMONT #2,3182
+2024,Ending electorate,Precinct,NEW HOPE,1434
+2024,Ending electorate,Precinct,BELMONT #3,943
+2024,Ending electorate,Sex code,F,6377
+2024,Ending electorate,Sex code,M,5566
+2024,Ending electorate,Sex code,U,888
+2024,Ending electorate,Race code,W,9959
+2024,Ending electorate,Race code,B,1206
+2024,Ending electorate,Race code,U,934
+2024,Ending electorate,Race code,O,409
+2024,Ending electorate,Race code,A,250
+2024,Ending electorate,Race code,M,44
+2024,Ending electorate,Race code,I,25
+2024,Ending electorate,Race code,P,4
+2024,Ending electorate,Age,65+,2735
+2024,Ending electorate,Age,35–44,2454
+2024,Ending electorate,Age,25–34,2224
+2024,Ending electorate,Age,45–54,2165
+2024,Ending electorate,Age,55–64,2040
+2024,Ending electorate,Age,16–24,1213
+2025,Arrivals,Party,UNA,566
+2025,Arrivals,Party,REP,435
+2025,Arrivals,Party,DEM,275
+2025,Arrivals,Party,LIB,10
+2025,Arrivals,Precinct,SOUTH POINT,421
+2025,Arrivals,Precinct,WILKINSON,331
+2025,Arrivals,Precinct,CENTRAL BELMONT,311
+2025,Arrivals,Precinct,NEW HOPE,181
+2025,Arrivals,Precinct,NORTH BELMONT,42
+2025,Arrivals,Sex code,F,667
+2025,Arrivals,Sex code,M,561
+2025,Arrivals,Sex code,U,58
+2025,Arrivals,Race code,W,1024
+2025,Arrivals,Race code,B,113
+2025,Arrivals,Race code,O,64
+2025,Arrivals,Race code,U,48
+2025,Arrivals,Race code,A,31
+2025,Arrivals,Race code,I,3
+2025,Arrivals,Race code,M,3
+2025,Departures,Party,UNA,429
+2025,Departures,Party,REP,365
+2025,Departures,Party,DEM,253
+2025,Departures,Party,LIB,7
+2025,Departures,Party,NLB,6
+2025,Departures,Precinct,BELMONT #1,392
+2025,Departures,Precinct,BELMONT #2,354
+2025,Departures,Precinct,SOUTH POINT,174
+2025,Departures,Precinct,BELMONT #3,74
+2025,Departures,Precinct,NEW HOPE,66
+2025,Departures,Sex code,F,525
+2025,Departures,Sex code,M,455
+2025,Departures,Sex code,U,80
+2025,Departures,Race code,W,810
+2025,Departures,Race code,B,95
+2025,Departures,Race code,U,83
+2025,Departures,Race code,O,45
+2025,Departures,Race code,A,22
+2025,Departures,Race code,M,5
+2025,Departures,Age,25–34,274
+2025,Departures,Age,65+,210
+2025,Departures,Age,35–44,207
+2025,Departures,Age,45–54,149
+2025,Departures,Age,55–64,133
+2025,Departures,Age,16–24,87
+2025,Ending electorate,Party,UNA,5206
+2025,Ending electorate,Party,REP,4846
+2025,Ending electorate,Party,DEM,2903
+2025,Ending electorate,Party,LIB,96
+2025,Ending electorate,Party,GRE,6
+2025,Ending electorate,Precinct,CENTRAL BELMONT,3979
+2025,Ending electorate,Precinct,SOUTH POINT,3445
+2025,Ending electorate,Precinct,WILKINSON,3167
+2025,Ending electorate,Precinct,NEW HOPE,1554
+2025,Ending electorate,Precinct,NORTH BELMONT,912
+2025,Ending electorate,Sex code,F,6533
+2025,Ending electorate,Sex code,M,5676
+2025,Ending electorate,Sex code,U,848
+2025,Ending electorate,Race code,W,10187
+2025,Ending electorate,Race code,B,1226
+2025,Ending electorate,Race code,U,881
+2025,Ending electorate,Race code,O,429
+2025,Ending electorate,Race code,A,259
+2025,Ending electorate,Race code,M,42
+2025,Ending electorate,Race code,I,29
+2025,Ending electorate,Race code,P,4
+2025,Ending electorate,Age,65+,2952
+2025,Ending electorate,Age,35–44,2482
+2025,Ending electorate,Age,45–54,2163
+2025,Ending electorate,Age,55–64,2148
+2025,Ending electorate,Age,25–34,2143
+2025,Ending electorate,Age,16–24,1168
+2025,Ending electorate,Age,Unknown / invalid,1

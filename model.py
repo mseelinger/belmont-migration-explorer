@@ -68,3 +68,40 @@ def validate_flow_totals(flows, arrivals):
 
 def filter_years(frame, column, years):
     return frame[frame[column].between(*years)].copy()
+
+
+def load_map_flows(path):
+    df = load_flows(path)
+    coordinates = pd.read_csv(path)[['origin_lat','origin_lon','dest_lat','dest_lon']].apply(pd.to_numeric,errors='raise')
+    if coordinates.isna().any().any() or not coordinates[['origin_lat','dest_lat']].abs().le(90).all().all() or not coordinates[['origin_lon','dest_lon']].abs().le(180).all().all():
+        raise ValueError('Invalid map coordinates.')
+    return pd.concat([df,coordinates],axis=1)
+
+
+def load_bundle(directory):
+    import json
+    annual=load_summary(directory/'annual_summary.csv')
+    flows=load_map_flows(directory/'flows_enriched.csv')
+    validate_flow_totals(flows,annual)
+    coverage=load_table(directory/'coverage_enriched.csv',['cohort_year','total_arrivals','mapped_arrivals','mapped_share_pct'],['cohort_year','total_arrivals','mapped_arrivals'],['cohort_year'])
+    if not coverage.set_index('cohort_year').total_arrivals.equals(annual.set_index('year').arrivals.rename('total_arrivals')):
+        raise ValueError('Coverage arrival totals do not match annual stocks.')
+    if not coverage.set_index('cohort_year').mapped_arrivals.equals(flows.groupby('cohort_year').movers.sum().rename('mapped_arrivals')):
+        raise ValueError('Mapped coverage does not match origin totals.')
+    profiles=load_table(directory/'profiles.csv',['year','population','dimension','category','events'],['year','events'],['year','population','dimension','category'])
+    for (year,population,dimension), n in profiles.groupby(['year','population','dimension']).events.sum().items():
+        column={'Arrivals':'arrivals','Departures':'departures','Ending electorate':'end_voters'}[population]
+        if n != annual.set_index('year').loc[year,column]:
+            raise ValueError(f'Profile does not reconcile: {year} {population} {dimension}')
+    retention=load_table(directory/'cohort_retention.csv',['cohort_year','snapshot_year','years_since_arrival','cohort_size','present','continuously_present'],['cohort_year','snapshot_year','years_since_arrival','cohort_size','present','continuously_present'],['cohort_year','snapshot_year'])
+    if (retention.continuously_present>retention.present).any() or (retention.present>retention.cohort_size).any():
+        raise ValueError('Cohort retention exceeds its denominator.')
+    destinations=load_table(directory/'departure_destinations.csv',['year','destination','evidence','events'],['year','events'],['year','destination','evidence'])
+    if not destinations.groupby('year').events.sum().equals(annual.set_index('year').departures.rename('events')):
+        raise ValueError('Departure evidence does not reconcile.')
+    composition=load_table(directory/'current_composition.csv',['arrival_cohort','voters'],['voters'],['arrival_cohort'])
+    if composition.voters.sum()!=annual.iloc[-1].end_voters:
+        raise ValueError('Current electorate composition does not reconcile.')
+    ranges=load_table(directory/'arrival_ranges.csv',['start_year','end_year','arrival_events','unique_arrivals'],['start_year','end_year','arrival_events','unique_arrivals'],['start_year','end_year'])
+    metadata=json.loads((directory/'data_metadata.json').read_text())
+    return annual,flows,coverage,profiles,retention,destinations,composition,ranges,metadata

@@ -1,0 +1,834 @@
+year,destination,evidence,events
+2016,ALEXANDER / No municipality,Current NC registration elsewhere,1
+2016,ASHE / No municipality,Current NC registration elsewhere,2
+2016,Absent from NC snapshot,No current NC registration,5
+2016,BRUNSWICK / SUNSET BEACH,Current NC registration elsewhere,1
+2016,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,3
+2016,BUNCOMBE / No municipality,Current NC registration elsewhere,4
+2016,BUNCOMBE / TOWN OF WOODFIN,Current NC registration elsewhere,1
+2016,CABARRUS / CONCORD,Current NC registration elsewhere,5
+2016,CABARRUS / HARRISBURG,Current NC registration elsewhere,3
+2016,CATAWBA / HICKORY,Current NC registration elsewhere,3
+2016,CATAWBA / No municipality,Current NC registration elsewhere,1
+2016,CHATHAM / No municipality,Current NC registration elsewhere,1
+2016,CLEVELAND / BOILING SPRINGS,Current NC registration elsewhere,1
+2016,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,4
+2016,CLEVELAND / No municipality,Current NC registration elsewhere,5
+2016,CLEVELAND / SHELBY,Current NC registration elsewhere,3
+2016,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2016,CUMBERLAND / No municipality,Current NC registration elsewhere,1
+2016,DAVIDSON / No municipality,Current NC registration elsewhere,1
+2016,DAVIE / No municipality,Current NC registration elsewhere,2
+2016,DURHAM / DURHAM,Current NC registration elsewhere,4
+2016,FORSYTH / LEWISVILLE,Current NC registration elsewhere,1
+2016,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,4
+2016,FRANKLIN / No municipality,Current NC registration elsewhere,2
+2016,GASTON / BESSEMER CITY,Current NC registration elsewhere,4
+2016,GASTON / CRAMERTON,Current NC registration elsewhere,52
+2016,GASTON / DALLAS,Current NC registration elsewhere,6
+2016,GASTON / GASTONIA,Current NC registration elsewhere,125
+2016,GASTON / LOWELL,Current NC registration elsewhere,17
+2016,GASTON / MCADENVILLE,Current NC registration elsewhere,8
+2016,GASTON / MT HOLLY,Current NC registration elsewhere,80
+2016,GASTON / No municipality,Current NC registration elsewhere,150
+2016,GASTON / RANLO,Current NC registration elsewhere,4
+2016,GASTON / STANLEY,Current NC registration elsewhere,6
+2016,GRANVILLE / No municipality,Current NC registration elsewhere,1
+2016,GUILFORD / GREENSBORO,Current NC registration elsewhere,8
+2016,GUILFORD / HIGH POINT,Current NC registration elsewhere,1
+2016,HARNETT / No municipality,Current NC registration elsewhere,1
+2016,HENDERSON / No municipality,Current NC registration elsewhere,4
+2016,IREDELL / No municipality,Current NC registration elsewhere,5
+2016,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,3
+2016,JACKSON / No municipality,Current NC registration elsewhere,3
+2016,JOHNSTON / TOWN OF CLAYTON,Current NC registration elsewhere,1
+2016,LENOIR / No municipality,Current NC registration elsewhere,1
+2016,LINCOLN / No municipality,Current NC registration elsewhere,10
+2016,MACON / No municipality,Current NC registration elsewhere,2
+2016,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,66
+2016,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,5
+2016,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,1
+2016,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,7
+2016,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,1
+2016,MECKLENBURG / MINT HILL,Current NC registration elsewhere,3
+2016,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,10
+2016,MOORE / PINEHURST,Current NC registration elsewhere,2
+2016,NASH / No municipality,Current NC registration elsewhere,1
+2016,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,3
+2016,ONSLOW / NORTH TOPSAIL BEACH,Current NC registration elsewhere,1
+2016,ONSLOW / No municipality,Current NC registration elsewhere,2
+2016,ORANGE / CARRBORO,Current NC registration elsewhere,1
+2016,ORANGE / CHAPEL HILL,Current NC registration elsewhere,1
+2016,ORANGE / No municipality,Current NC registration elsewhere,1
+2016,PENDER / SURF CITY,Current NC registration elsewhere,1
+2016,PITT / GREENVILLE,Current NC registration elsewhere,4
+2016,PITT / No municipality,Current NC registration elsewhere,1
+2016,RANDOLPH / ASHEBORO,Current NC registration elsewhere,1
+2016,RANDOLPH / No municipality,Current NC registration elsewhere,2
+2016,ROBESON / No municipality,Current NC registration elsewhere,1
+2016,ROWAN / No municipality,Current NC registration elsewhere,2
+2016,ROWAN / SALISBURY,Current NC registration elsewhere,1
+2016,RUTHERFORD / No municipality,Current NC registration elsewhere,1
+2016,Removed record only,No current NC registration,122
+2016,SAMPSON / No municipality,Current NC registration elsewhere,2
+2016,STANLY / No municipality,Current NC registration elsewhere,3
+2016,UNION / No municipality,Current NC registration elsewhere,1
+2016,UNION / STALLINGS,Current NC registration elsewhere,1
+2016,UNION / WEDDINGTON,Current NC registration elsewhere,1
+2016,UNION / WINGATE,Current NC registration elsewhere,2
+2016,VANCE / No municipality,Current NC registration elsewhere,1
+2016,WAKE / CARY,Current NC registration elsewhere,2
+2016,WAKE / No municipality,Current NC registration elsewhere,1
+2016,WAKE / RALEIGH,Current NC registration elsewhere,5
+2016,WAKE / WAKE FOREST,Current NC registration elsewhere,1
+2016,WATAUGA / BLOWING ROCK,Current NC registration elsewhere,1
+2016,WATAUGA / BOONE,Current NC registration elsewhere,4
+2017,ALAMANCE / ELON,Current NC registration elsewhere,1
+2017,ASHE / No municipality,Current NC registration elsewhere,2
+2017,Absent from NC snapshot,No current NC registration,5
+2017,BRUNSWICK / LELAND,Current NC registration elsewhere,1
+2017,BRUNSWICK / SUNSET BEACH,Current NC registration elsewhere,2
+2017,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2017,CABARRUS / CONCORD,Current NC registration elsewhere,1
+2017,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,1
+2017,CALDWELL / No municipality,Current NC registration elsewhere,2
+2017,CATAWBA / No municipality,Current NC registration elsewhere,2
+2017,CHATHAM / PITTSBORO,Current NC registration elsewhere,2
+2017,CLEVELAND / No municipality,Current NC registration elsewhere,5
+2017,CLEVELAND / SHELBY,Current NC registration elsewhere,1
+2017,GASTON / CRAMERTON,Current NC registration elsewhere,14
+2017,GASTON / GASTONIA,Current NC registration elsewhere,34
+2017,GASTON / KINGS MOUNTAIN,Current NC registration elsewhere,3
+2017,GASTON / LOWELL,Current NC registration elsewhere,1
+2017,GASTON / MCADENVILLE,Current NC registration elsewhere,2
+2017,GASTON / MT HOLLY,Current NC registration elsewhere,28
+2017,GASTON / No municipality,Current NC registration elsewhere,68
+2017,GASTON / RANLO,Current NC registration elsewhere,1
+2017,GASTON / STANLEY,Current NC registration elsewhere,1
+2017,IREDELL / No municipality,Current NC registration elsewhere,1
+2017,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,1
+2017,JACKSON / No municipality,Current NC registration elsewhere,2
+2017,LINCOLN / LINCOLNTON,Current NC registration elsewhere,4
+2017,LINCOLN / No municipality,Current NC registration elsewhere,2
+2017,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,31
+2017,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,3
+2017,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,1
+2017,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,3
+2017,MECKLENBURG / MINT HILL,Current NC registration elsewhere,1
+2017,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,5
+2017,MOORE / PINEHURST,Current NC registration elsewhere,1
+2017,NEW HANOVER / No municipality,Current NC registration elsewhere,1
+2017,PITT / GREENVILLE,Current NC registration elsewhere,1
+2017,ROWAN / KANNAPOLIS,Current NC registration elsewhere,1
+2017,RUTHERFORD / BOSTIC,Current NC registration elsewhere,1
+2017,RUTHERFORD / No municipality,Current NC registration elsewhere,1
+2017,Removed record only,No current NC registration,417
+2017,STANLY / OAKBORO,Current NC registration elsewhere,1
+2017,STANLY / STANFIELD,Current NC registration elsewhere,2
+2017,STOKES / No municipality,Current NC registration elsewhere,1
+2017,UNION / INDIAN TRAIL,Current NC registration elsewhere,1
+2017,WAKE / No municipality,Current NC registration elsewhere,1
+2017,WAKE / RALEIGH,Current NC registration elsewhere,4
+2018,ALAMANCE / BURLINGTON,Current NC registration elsewhere,1
+2018,ALAMANCE / ELON,Current NC registration elsewhere,1
+2018,ALEXANDER / No municipality,Current NC registration elsewhere,2
+2018,Absent from NC snapshot,No current NC registration,4
+2018,BRUNSWICK / LELAND,Current NC registration elsewhere,1
+2018,BRUNSWICK / No municipality,Current NC registration elsewhere,2
+2018,BRUNSWICK / OAK ISLAND,Current NC registration elsewhere,1
+2018,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,4
+2018,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2018,BURKE / No municipality,Current NC registration elsewhere,1
+2018,CABARRUS / HARRISBURG,Current NC registration elsewhere,1
+2018,CABARRUS / No municipality,Current NC registration elsewhere,1
+2018,CATAWBA / HICKORY,Current NC registration elsewhere,2
+2018,CATAWBA / No municipality,Current NC registration elsewhere,2
+2018,CLEVELAND / BOILING SPRINGS,Current NC registration elsewhere,1
+2018,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,4
+2018,CLEVELAND / No municipality,Current NC registration elsewhere,3
+2018,CLEVELAND / SHELBY,Current NC registration elsewhere,3
+2018,CRAVEN / No municipality,Current NC registration elsewhere,2
+2018,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2018,DAVIDSON / LEXINGTON,Current NC registration elsewhere,1
+2018,DURHAM / DURHAM,Current NC registration elsewhere,3
+2018,FORSYTH / KERNERSVILLE,Current NC registration elsewhere,1
+2018,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,2
+2018,GASTON / BESSEMER CITY,Current NC registration elsewhere,1
+2018,GASTON / CHERRYVILLE,Current NC registration elsewhere,2
+2018,GASTON / CRAMERTON,Current NC registration elsewhere,39
+2018,GASTON / DALLAS,Current NC registration elsewhere,4
+2018,GASTON / GASTONIA,Current NC registration elsewhere,94
+2018,GASTON / LOWELL,Current NC registration elsewhere,5
+2018,GASTON / MCADENVILLE,Current NC registration elsewhere,8
+2018,GASTON / MT HOLLY,Current NC registration elsewhere,56
+2018,GASTON / No municipality,Current NC registration elsewhere,90
+2018,GASTON / RANLO,Current NC registration elsewhere,1
+2018,GASTON / STANLEY,Current NC registration elsewhere,10
+2018,GUILFORD / GREENSBORO,Current NC registration elsewhere,1
+2018,GUILFORD / JAMESTOWN,Current NC registration elsewhere,2
+2018,GUILFORD / SUMMERFIELD,Current NC registration elsewhere,1
+2018,HAYWOOD / MAGGIE VALLEY,Current NC registration elsewhere,2
+2018,HENDERSON / No municipality,Current NC registration elsewhere,3
+2018,IREDELL / CITY OF STATESVILLE,Current NC registration elsewhere,2
+2018,IREDELL / No municipality,Current NC registration elsewhere,1
+2018,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,3
+2018,JACKSON / No municipality,Current NC registration elsewhere,1
+2018,JOHNSTON / No municipality,Current NC registration elsewhere,2
+2018,JOHNSTON / TOWN OF ARCHER LODGE,Current NC registration elsewhere,2
+2018,LINCOLN / No municipality,Current NC registration elsewhere,16
+2018,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,70
+2018,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,2
+2018,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,5
+2018,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,3
+2018,MECKLENBURG / MINT HILL,Current NC registration elsewhere,1
+2018,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,5
+2018,NASH / CITY OF ROCKY MOUNT,Current NC registration elsewhere,1
+2018,NEW HANOVER / CAROLINA BEACH,Current NC registration elsewhere,1
+2018,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,1
+2018,ORANGE / CHAPEL HILL,Current NC registration elsewhere,1
+2018,PENDER / No municipality,Current NC registration elsewhere,1
+2018,PERSON / No municipality,Current NC registration elsewhere,1
+2018,RICHMOND / No municipality,Current NC registration elsewhere,1
+2018,ROWAN / No municipality,Current NC registration elsewhere,3
+2018,Removed record only,No current NC registration,158
+2018,STANLY / ALBEMARLE,Current NC registration elsewhere,1
+2018,UNION / INDIAN TRAIL,Current NC registration elsewhere,1
+2018,UNION / No municipality,Current NC registration elsewhere,1
+2018,UNION / STALLINGS,Current NC registration elsewhere,1
+2018,UNION / WINGATE,Current NC registration elsewhere,1
+2018,WAKE / APEX,Current NC registration elsewhere,1
+2018,WAKE / CARY,Current NC registration elsewhere,1
+2018,WAKE / RALEIGH,Current NC registration elsewhere,5
+2018,WAKE / UNINCORPORATED,Current NC registration elsewhere,2
+2018,WATAUGA / BOONE,Current NC registration elsewhere,3
+2018,WAYNE / No municipality,Current NC registration elsewhere,1
+2018,WILKES / No municipality,Current NC registration elsewhere,2
+2019,Absent from NC snapshot,No current NC registration,1
+2019,BRUNSWICK / BOILING SPRING LAKES,Current NC registration elsewhere,2
+2019,BRUNSWICK / LELAND,Current NC registration elsewhere,2
+2019,BRUNSWICK / SHALLOTTE,Current NC registration elsewhere,1
+2019,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,3
+2019,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,2
+2019,BUNCOMBE / No municipality,Current NC registration elsewhere,3
+2019,BUNCOMBE / TOWN OF WOODFIN,Current NC registration elsewhere,2
+2019,CABARRUS / CONCORD,Current NC registration elsewhere,4
+2019,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,1
+2019,CABARRUS / No municipality,Current NC registration elsewhere,1
+2019,CATAWBA / HICKORY,Current NC registration elsewhere,1
+2019,CATAWBA / No municipality,Current NC registration elsewhere,2
+2019,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,5
+2019,CLEVELAND / No municipality,Current NC registration elsewhere,8
+2019,CLEVELAND / SHELBY,Current NC registration elsewhere,2
+2019,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2019,DURHAM / DURHAM,Current NC registration elsewhere,2
+2019,FORSYTH / KERNERSVILLE,Current NC registration elsewhere,1
+2019,FORSYTH / UNINCORPORATED,Current NC registration elsewhere,1
+2019,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,1
+2019,GASTON / CRAMERTON,Current NC registration elsewhere,31
+2019,GASTON / DALLAS,Current NC registration elsewhere,2
+2019,GASTON / GASTONIA,Current NC registration elsewhere,66
+2019,GASTON / LOWELL,Current NC registration elsewhere,5
+2019,GASTON / MCADENVILLE,Current NC registration elsewhere,3
+2019,GASTON / MT HOLLY,Current NC registration elsewhere,28
+2019,GASTON / No municipality,Current NC registration elsewhere,96
+2019,GASTON / RANLO,Current NC registration elsewhere,1
+2019,GASTON / STANLEY,Current NC registration elsewhere,4
+2019,GUILFORD / GREENSBORO,Current NC registration elsewhere,5
+2019,GUILFORD / No municipality,Current NC registration elsewhere,1
+2019,HARNETT / No municipality,Current NC registration elsewhere,1
+2019,HAYWOOD / CANTON,Current NC registration elsewhere,1
+2019,HAYWOOD / No municipality,Current NC registration elsewhere,1
+2019,HENDERSON / MILLS RIVER,Current NC registration elsewhere,1
+2019,HENDERSON / No municipality,Current NC registration elsewhere,1
+2019,IREDELL / No municipality,Current NC registration elsewhere,3
+2019,IREDELL / TOWN OF TROUTMAN,Current NC registration elsewhere,1
+2019,LINCOLN / LINCOLNTON,Current NC registration elsewhere,1
+2019,LINCOLN / No municipality,Current NC registration elsewhere,8
+2019,MACON / No municipality,Current NC registration elsewhere,1
+2019,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,52
+2019,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,1
+2019,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,2
+2019,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,2
+2019,MECKLENBURG / MINT HILL,Current NC registration elsewhere,2
+2019,MECKLENBURG / PINEVILLE,Current NC registration elsewhere,1
+2019,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,19
+2019,MOORE / NOT MUNICIPAL LIMITS,Current NC registration elsewhere,2
+2019,NEW HANOVER / No municipality,Current NC registration elsewhere,2
+2019,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,2
+2019,ONSLOW / No municipality,Current NC registration elsewhere,1
+2019,PERSON / No municipality,Current NC registration elsewhere,1
+2019,PITT / AYDEN,Current NC registration elsewhere,1
+2019,PITT / FARMVILLE,Current NC registration elsewhere,1
+2019,ROCKINGHAM / No municipality,Current NC registration elsewhere,1
+2019,ROWAN / CHINA GROVE,Current NC registration elsewhere,2
+2019,ROWAN / SALISBURY,Current NC registration elsewhere,1
+2019,RUTHERFORD / FOREST CITY,Current NC registration elsewhere,1
+2019,RUTHERFORD / No municipality,Current NC registration elsewhere,4
+2019,Removed record only,No current NC registration,933
+2019,UNION / INDIAN TRAIL,Current NC registration elsewhere,1
+2019,WAKE / APEX,Current NC registration elsewhere,2
+2019,WAKE / GARNER,Current NC registration elsewhere,1
+2019,WAKE / RALEIGH,Current NC registration elsewhere,6
+2019,WATAUGA / BOONE,Current NC registration elsewhere,1
+2019,WILKES / No municipality,Current NC registration elsewhere,1
+2019,YADKIN / YADKINVILLE,Current NC registration elsewhere,2
+2020,ALEXANDER / No municipality,Current NC registration elsewhere,3
+2020,ANSON / No municipality,Current NC registration elsewhere,1
+2020,ASHE / No municipality,Current NC registration elsewhere,1
+2020,Absent from NC snapshot,No current NC registration,6
+2020,BRUNSWICK / HOLDEN BEACH,Current NC registration elsewhere,1
+2020,BRUNSWICK / OAK ISLAND,Current NC registration elsewhere,3
+2020,BRUNSWICK / SUNSET BEACH,Current NC registration elsewhere,1
+2020,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,1
+2020,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2020,BUNCOMBE / TOWN OF BLACK MOUNTAIN,Current NC registration elsewhere,1
+2020,CABARRUS / CONCORD,Current NC registration elsewhere,8
+2020,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,3
+2020,CALDWELL / LENOIR,Current NC registration elsewhere,1
+2020,CATAWBA / CLAREMONT,Current NC registration elsewhere,1
+2020,CATAWBA / CONOVER,Current NC registration elsewhere,1
+2020,CATAWBA / HICKORY,Current NC registration elsewhere,2
+2020,CATAWBA / No municipality,Current NC registration elsewhere,7
+2020,CHATHAM / No municipality,Current NC registration elsewhere,2
+2020,CHOWAN / EDENTON,Current NC registration elsewhere,1
+2020,CLAY / No municipality,Current NC registration elsewhere,2
+2020,CLEVELAND / BOILING SPRINGS,Current NC registration elsewhere,2
+2020,CLEVELAND / GROVER,Current NC registration elsewhere,1
+2020,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2020,CLEVELAND / No municipality,Current NC registration elsewhere,15
+2020,COLUMBUS / No municipality,Current NC registration elsewhere,1
+2020,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2020,DAVIDSON / LEXINGTON,Current NC registration elsewhere,1
+2020,DAVIDSON / WALLBURG,Current NC registration elsewhere,1
+2020,DURHAM / DURHAM,Current NC registration elsewhere,2
+2020,FORSYTH / CLEMMONS,Current NC registration elsewhere,1
+2020,FORSYTH / UNINCORPORATED,Current NC registration elsewhere,1
+2020,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,1
+2020,FRANKLIN / No municipality,Current NC registration elsewhere,1
+2020,GASTON / BESSEMER CITY,Current NC registration elsewhere,6
+2020,GASTON / CHERRYVILLE,Current NC registration elsewhere,3
+2020,GASTON / CRAMERTON,Current NC registration elsewhere,68
+2020,GASTON / DALLAS,Current NC registration elsewhere,7
+2020,GASTON / GASTONIA,Current NC registration elsewhere,149
+2020,GASTON / LOWELL,Current NC registration elsewhere,6
+2020,GASTON / MCADENVILLE,Current NC registration elsewhere,8
+2020,GASTON / MT HOLLY,Current NC registration elsewhere,56
+2020,GASTON / No municipality,Current NC registration elsewhere,170
+2020,GASTON / RANLO,Current NC registration elsewhere,5
+2020,GASTON / STANLEY,Current NC registration elsewhere,10
+2020,GUILFORD / GREENSBORO,Current NC registration elsewhere,4
+2020,GUILFORD / HIGH POINT,Current NC registration elsewhere,2
+2020,HENDERSON / HENDERSONVILLE,Current NC registration elsewhere,1
+2020,HENDERSON / No municipality,Current NC registration elsewhere,1
+2020,IREDELL / No municipality,Current NC registration elsewhere,4
+2020,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,5
+2020,IREDELL / TOWN OF TROUTMAN,Current NC registration elsewhere,1
+2020,JACKSON / No municipality,Current NC registration elsewhere,2
+2020,LEE / No municipality,Current NC registration elsewhere,1
+2020,LEE / SANFORD,Current NC registration elsewhere,1
+2020,LINCOLN / LINCOLNTON,Current NC registration elsewhere,1
+2020,LINCOLN / No municipality,Current NC registration elsewhere,19
+2020,MCDOWELL / No municipality,Current NC registration elsewhere,1
+2020,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,97
+2020,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,1
+2020,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,2
+2020,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,6
+2020,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,1
+2020,MECKLENBURG / MINT HILL,Current NC registration elsewhere,1
+2020,MECKLENBURG / No municipality,Current NC registration elsewhere,3
+2020,MECKLENBURG / PINEVILLE,Current NC registration elsewhere,2
+2020,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,12
+2020,MITCHELL / No municipality,Current NC registration elsewhere,2
+2020,NEW HANOVER / No municipality,Current NC registration elsewhere,2
+2020,NEW HANOVER / THE CAPE,Current NC registration elsewhere,1
+2020,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,4
+2020,ONSLOW / HOLLY RIDGE,Current NC registration elsewhere,2
+2020,ORANGE / No municipality,Current NC registration elsewhere,1
+2020,PENDER / No municipality,Current NC registration elsewhere,6
+2020,PERSON / ROXBORO CITY,Current NC registration elsewhere,1
+2020,PITT / GREENVILLE,Current NC registration elsewhere,2
+2020,RICHMOND / ROCKINGHAM,Current NC registration elsewhere,1
+2020,ROBESON / TOWN OF LUMBERTON,Current NC registration elsewhere,1
+2020,ROWAN / CHINA GROVE,Current NC registration elsewhere,1
+2020,ROWAN / KANNAPOLIS,Current NC registration elsewhere,1
+2020,ROWAN / No municipality,Current NC registration elsewhere,2
+2020,ROWAN / SALISBURY,Current NC registration elsewhere,2
+2020,RUTHERFORD / LAKE LURE,Current NC registration elsewhere,1
+2020,RUTHERFORD / No municipality,Current NC registration elsewhere,1
+2020,Removed record only,No current NC registration,151
+2020,STANLY / LOCUST,Current NC registration elsewhere,2
+2020,STANLY / OAKBORO,Current NC registration elsewhere,1
+2020,SURRY / ELKIN,Current NC registration elsewhere,1
+2020,TRANSYLVANIA / No municipality,Current NC registration elsewhere,1
+2020,UNION / INDIAN TRAIL,Current NC registration elsewhere,1
+2020,UNION / MONROE,Current NC registration elsewhere,2
+2020,UNION / No municipality,Current NC registration elsewhere,3
+2020,UNION / WAXHAW,Current NC registration elsewhere,2
+2020,UNION / WEDDINGTON,Current NC registration elsewhere,2
+2020,WAKE / APEX,Current NC registration elsewhere,1
+2020,WAKE / FUQUAY VARINA,Current NC registration elsewhere,1
+2020,WAKE / KNIGHTDALE,Current NC registration elsewhere,1
+2020,WAKE / RALEIGH,Current NC registration elsewhere,12
+2020,WAKE / UNINCORPORATED,Current NC registration elsewhere,1
+2020,WATAUGA / BOONE,Current NC registration elsewhere,2
+2020,WATAUGA / WATAUGA COUNTY,Current NC registration elsewhere,2
+2021,ALAMANCE / No municipality,Current NC registration elsewhere,1
+2021,ALLEGHANY / SPARTA,Current NC registration elsewhere,1
+2021,ANSON / No municipality,Current NC registration elsewhere,1
+2021,Absent from NC snapshot,No current NC registration,2
+2021,BRUNSWICK / OAK ISLAND,Current NC registration elsewhere,1
+2021,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,2
+2021,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,2
+2021,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2021,BURKE / No municipality,Current NC registration elsewhere,2
+2021,CABARRUS / CONCORD,Current NC registration elsewhere,1
+2021,CABARRUS / HARRISBURG,Current NC registration elsewhere,2
+2021,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,2
+2021,CABARRUS / No municipality,Current NC registration elsewhere,2
+2021,CALDWELL / LENOIR,Current NC registration elsewhere,1
+2021,CALDWELL / No municipality,Current NC registration elsewhere,3
+2021,CATAWBA / HICKORY,Current NC registration elsewhere,1
+2021,CATAWBA / No municipality,Current NC registration elsewhere,4
+2021,CHATHAM / No municipality,Current NC registration elsewhere,1
+2021,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,3
+2021,CLEVELAND / No municipality,Current NC registration elsewhere,7
+2021,CLEVELAND / SHELBY,Current NC registration elsewhere,3
+2021,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,3
+2021,DAVIDSON / HIGH POINT,Current NC registration elsewhere,1
+2021,DAVIE / No municipality,Current NC registration elsewhere,2
+2021,DURHAM / DURHAM,Current NC registration elsewhere,1
+2021,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,2
+2021,GASTON / BESSEMER CITY,Current NC registration elsewhere,3
+2021,GASTON / CHERRYVILLE,Current NC registration elsewhere,1
+2021,GASTON / CRAMERTON,Current NC registration elsewhere,41
+2021,GASTON / DALLAS,Current NC registration elsewhere,2
+2021,GASTON / GASTONIA,Current NC registration elsewhere,60
+2021,GASTON / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2021,GASTON / LOWELL,Current NC registration elsewhere,2
+2021,GASTON / MCADENVILLE,Current NC registration elsewhere,8
+2021,GASTON / MT HOLLY,Current NC registration elsewhere,44
+2021,GASTON / No municipality,Current NC registration elsewhere,90
+2021,GASTON / RANLO,Current NC registration elsewhere,2
+2021,GASTON / STANLEY,Current NC registration elsewhere,6
+2021,GUILFORD / SUMMERFIELD,Current NC registration elsewhere,1
+2021,HARNETT / ANGIER,Current NC registration elsewhere,1
+2021,HENDERSON / No municipality,Current NC registration elsewhere,2
+2021,IREDELL / No municipality,Current NC registration elsewhere,1
+2021,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,5
+2021,JACKSON / No municipality,Current NC registration elsewhere,1
+2021,JOHNSTON / No municipality,Current NC registration elsewhere,1
+2021,LEE / SANFORD,Current NC registration elsewhere,1
+2021,LINCOLN / LINCOLNTON,Current NC registration elsewhere,2
+2021,LINCOLN / No municipality,Current NC registration elsewhere,19
+2021,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,50
+2021,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,2
+2021,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,7
+2021,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,2
+2021,MECKLENBURG / MINT HILL,Current NC registration elsewhere,2
+2021,MECKLENBURG / No municipality,Current NC registration elsewhere,1
+2021,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,4
+2021,MITCHELL / No municipality,Current NC registration elsewhere,2
+2021,MOORE / ABERDEEN,Current NC registration elsewhere,1
+2021,MOORE / SOUTHERN PINES,Current NC registration elsewhere,1
+2021,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,5
+2021,PITT / GREENVILLE,Current NC registration elsewhere,1
+2021,POLK / No municipality,Current NC registration elsewhere,2
+2021,ROWAN / SALISBURY,Current NC registration elsewhere,1
+2021,RUTHERFORD / No municipality,Current NC registration elsewhere,2
+2021,Removed record only,No current NC registration,484
+2021,STANLY / NORWOOD,Current NC registration elsewhere,1
+2021,UNION / MINERAL SPRINGS,Current NC registration elsewhere,1
+2021,UNION / No municipality,Current NC registration elsewhere,3
+2021,UNION / WAXHAW,Current NC registration elsewhere,1
+2021,UNION / WEDDINGTON,Current NC registration elsewhere,1
+2021,WAKE / APEX,Current NC registration elsewhere,1
+2021,WAKE / MORRISVILLE,Current NC registration elsewhere,1
+2021,WAKE / RALEIGH,Current NC registration elsewhere,1
+2021,WATAUGA / BOONE,Current NC registration elsewhere,1
+2021,WILKES / No municipality,Current NC registration elsewhere,1
+2022,ALLEGHANY / No municipality,Current NC registration elsewhere,1
+2022,ANSON / No municipality,Current NC registration elsewhere,1
+2022,Absent from NC snapshot,No current NC registration,2
+2022,BEAUFORT / WASHINGTON,Current NC registration elsewhere,2
+2022,BRUNSWICK / CALABASH,Current NC registration elsewhere,2
+2022,BRUNSWICK / CAROLINA SHORES,Current NC registration elsewhere,1
+2022,BRUNSWICK / OCEAN ISLE BEACH,Current NC registration elsewhere,1
+2022,BRUNSWICK / PROPOSED WINNABOW,Current NC registration elsewhere,1
+2022,BRUNSWICK / SHALLOTTE,Current NC registration elsewhere,1
+2022,BRUNSWICK / SUNSET BEACH,Current NC registration elsewhere,2
+2022,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,3
+2022,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,1
+2022,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2022,BUNCOMBE / TOWN OF WOODFIN,Current NC registration elsewhere,1
+2022,BURKE / No municipality,Current NC registration elsewhere,1
+2022,CABARRUS / CONCORD,Current NC registration elsewhere,5
+2022,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,3
+2022,CABARRUS / No municipality,Current NC registration elsewhere,1
+2022,CALDWELL / No municipality,Current NC registration elsewhere,1
+2022,CARTERET / MOREHEAD CITY,Current NC registration elsewhere,1
+2022,CATAWBA / HICKORY,Current NC registration elsewhere,5
+2022,CATAWBA / NEWTON,Current NC registration elsewhere,1
+2022,CATAWBA / No municipality,Current NC registration elsewhere,3
+2022,CHATHAM / PITTSBORO,Current NC registration elsewhere,2
+2022,CLEVELAND / CASAR,Current NC registration elsewhere,2
+2022,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2022,CLEVELAND / No municipality,Current NC registration elsewhere,9
+2022,CLEVELAND / SHELBY,Current NC registration elsewhere,4
+2022,DAVIDSON / No municipality,Current NC registration elsewhere,1
+2022,DURHAM / DURHAM,Current NC registration elsewhere,2
+2022,FORSYTH / LEWISVILLE,Current NC registration elsewhere,1
+2022,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,5
+2022,FRANKLIN / No municipality,Current NC registration elsewhere,1
+2022,GASTON / BESSEMER CITY,Current NC registration elsewhere,4
+2022,GASTON / CHERRYVILLE,Current NC registration elsewhere,1
+2022,GASTON / CRAMERTON,Current NC registration elsewhere,51
+2022,GASTON / DALLAS,Current NC registration elsewhere,1
+2022,GASTON / GASTONIA,Current NC registration elsewhere,93
+2022,GASTON / HIGH SHOALS,Current NC registration elsewhere,1
+2022,GASTON / MCADENVILLE,Current NC registration elsewhere,3
+2022,GASTON / MT HOLLY,Current NC registration elsewhere,42
+2022,GASTON / No municipality,Current NC registration elsewhere,78
+2022,GASTON / RANLO,Current NC registration elsewhere,1
+2022,GASTON / STANLEY,Current NC registration elsewhere,11
+2022,GRANVILLE / OXFORD,Current NC registration elsewhere,2
+2022,GUILFORD / GREENSBORO,Current NC registration elsewhere,2
+2022,GUILFORD / OAK RIDGE,Current NC registration elsewhere,2
+2022,HARNETT / No municipality,Current NC registration elsewhere,1
+2022,HAYWOOD / MAGGIE VALLEY,Current NC registration elsewhere,2
+2022,HENDERSON / FLAT ROCK,Current NC registration elsewhere,1
+2022,HENDERSON / LAUREL PARK,Current NC registration elsewhere,1
+2022,IREDELL / CITY OF STATESVILLE,Current NC registration elsewhere,1
+2022,IREDELL / No municipality,Current NC registration elsewhere,8
+2022,JACKSON / No municipality,Current NC registration elsewhere,1
+2022,JOHNSTON / No municipality,Current NC registration elsewhere,1
+2022,LINCOLN / LINCOLNTON,Current NC registration elsewhere,6
+2022,LINCOLN / No municipality,Current NC registration elsewhere,16
+2022,MCDOWELL / No municipality,Current NC registration elsewhere,3
+2022,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,78
+2022,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,5
+2022,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,3
+2022,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,4
+2022,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,1
+2022,MECKLENBURG / MINT HILL,Current NC registration elsewhere,2
+2022,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,10
+2022,MONTGOMERY / TROY,Current NC registration elsewhere,1
+2022,MOORE / PINEHURST,Current NC registration elsewhere,1
+2022,MOORE / SOUTHERN PINES,Current NC registration elsewhere,1
+2022,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,4
+2022,ONSLOW / No municipality,Current NC registration elsewhere,2
+2022,ORANGE / CHAPEL HILL,Current NC registration elsewhere,5
+2022,ORANGE / No municipality,Current NC registration elsewhere,1
+2022,PENDER / No municipality,Current NC registration elsewhere,1
+2022,PITT / GREENVILLE,Current NC registration elsewhere,1
+2022,POLK / No municipality,Current NC registration elsewhere,2
+2022,ROWAN / CLEVELAND,Current NC registration elsewhere,1
+2022,ROWAN / No municipality,Current NC registration elsewhere,2
+2022,RUTHERFORD / No municipality,Current NC registration elsewhere,1
+2022,Removed record only,No current NC registration,195
+2022,SCOTLAND / No municipality,Current NC registration elsewhere,1
+2022,STANLY / ALBEMARLE,Current NC registration elsewhere,2
+2022,STANLY / No municipality,Current NC registration elsewhere,1
+2022,SURRY / MT AIRY,Current NC registration elsewhere,1
+2022,SURRY / No municipality,Current NC registration elsewhere,1
+2022,SURRY / PILOT MOUNTAIN,Current NC registration elsewhere,1
+2022,UNION / MONROE,Current NC registration elsewhere,3
+2022,UNION / No municipality,Current NC registration elsewhere,3
+2022,WAKE / APEX,Current NC registration elsewhere,1
+2022,WAKE / CARY,Current NC registration elsewhere,2
+2022,WAKE / FUQUAY VARINA,Current NC registration elsewhere,2
+2022,WAKE / MORRISVILLE,Current NC registration elsewhere,1
+2022,WAKE / RALEIGH,Current NC registration elsewhere,8
+2022,WAKE / WAKE FOREST,Current NC registration elsewhere,1
+2022,WAKE / WENDELL,Current NC registration elsewhere,2
+2022,WATAUGA / BOONE,Current NC registration elsewhere,4
+2022,WATAUGA / WATAUGA COUNTY,Current NC registration elsewhere,1
+2022,WILSON / No municipality,Current NC registration elsewhere,2
+2023,ALAMANCE / MEBANE,Current NC registration elsewhere,2
+2023,ALAMANCE / No municipality,Current NC registration elsewhere,1
+2023,ALEXANDER / No municipality,Current NC registration elsewhere,1
+2023,Absent from NC snapshot,No current NC registration,3
+2023,BRUNSWICK / OAK ISLAND,Current NC registration elsewhere,1
+2023,BRUNSWICK / SOUTHPORT,Current NC registration elsewhere,1
+2023,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,2
+2023,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2023,BUNCOMBE / TOWN OF WEAVERVILLE,Current NC registration elsewhere,2
+2023,BURKE / CITY OF MORGANTON,Current NC registration elsewhere,2
+2023,CABARRUS / CONCORD,Current NC registration elsewhere,4
+2023,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,3
+2023,CABARRUS / MIDLAND,Current NC registration elsewhere,2
+2023,CABARRUS / MT PLEASANT,Current NC registration elsewhere,1
+2023,CALDWELL / GRANITE FALLS,Current NC registration elsewhere,1
+2023,CALDWELL / LENOIR,Current NC registration elsewhere,1
+2023,CATAWBA / MAIDEN,Current NC registration elsewhere,1
+2023,CATAWBA / NEWTON,Current NC registration elsewhere,1
+2023,CATAWBA / No municipality,Current NC registration elsewhere,7
+2023,CLEVELAND / BOILING SPRINGS,Current NC registration elsewhere,1
+2023,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,3
+2023,CLEVELAND / No municipality,Current NC registration elsewhere,6
+2023,CLEVELAND / SHELBY,Current NC registration elsewhere,2
+2023,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2023,CUMBERLAND / SPRING LAKE,Current NC registration elsewhere,1
+2023,EDGECOMBE / No municipality,Current NC registration elsewhere,1
+2023,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,2
+2023,FRANKLIN / No municipality,Current NC registration elsewhere,1
+2023,FRANKLIN / TOWN OF YOUNGSVILLE,Current NC registration elsewhere,1
+2023,GASTON / BESSEMER CITY,Current NC registration elsewhere,2
+2023,GASTON / CHERRYVILLE,Current NC registration elsewhere,2
+2023,GASTON / CRAMERTON,Current NC registration elsewhere,29
+2023,GASTON / DALLAS,Current NC registration elsewhere,3
+2023,GASTON / GASTONIA,Current NC registration elsewhere,51
+2023,GASTON / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2023,GASTON / LOWELL,Current NC registration elsewhere,5
+2023,GASTON / MCADENVILLE,Current NC registration elsewhere,2
+2023,GASTON / MT HOLLY,Current NC registration elsewhere,30
+2023,GASTON / No municipality,Current NC registration elsewhere,58
+2023,GASTON / RANLO,Current NC registration elsewhere,2
+2023,GASTON / STANLEY,Current NC registration elsewhere,7
+2023,GRANVILLE / No municipality,Current NC registration elsewhere,1
+2023,GUILFORD / GREENSBORO,Current NC registration elsewhere,1
+2023,GUILFORD / No municipality,Current NC registration elsewhere,1
+2023,HARNETT / No municipality,Current NC registration elsewhere,1
+2023,HENDERSON / LAUREL PARK,Current NC registration elsewhere,2
+2023,HENDERSON / No municipality,Current NC registration elsewhere,2
+2023,IREDELL / No municipality,Current NC registration elsewhere,1
+2023,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,3
+2023,JACKSON / SYLVA,Current NC registration elsewhere,1
+2023,JOHNSTON / No municipality,Current NC registration elsewhere,1
+2023,LINCOLN / LINCOLNTON,Current NC registration elsewhere,2
+2023,LINCOLN / No municipality,Current NC registration elsewhere,12
+2023,MACON / FRANKLIN,Current NC registration elsewhere,2
+2023,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,49
+2023,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,1
+2023,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,1
+2023,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,11
+2023,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,3
+2023,MECKLENBURG / MINT HILL,Current NC registration elsewhere,1
+2023,MECKLENBURG / No municipality,Current NC registration elsewhere,1
+2023,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,12
+2023,MONTGOMERY / No municipality,Current NC registration elsewhere,2
+2023,MOORE / NOT MUNICIPAL LIMITS,Current NC registration elsewhere,3
+2023,MOORE / PINEHURST,Current NC registration elsewhere,1
+2023,MOORE / WHISPERING PINES,Current NC registration elsewhere,2
+2023,NEW HANOVER / No municipality,Current NC registration elsewhere,1
+2023,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,4
+2023,ONSLOW / No municipality,Current NC registration elsewhere,1
+2023,ORANGE / CHAPEL HILL,Current NC registration elsewhere,3
+2023,PENDER / No municipality,Current NC registration elsewhere,1
+2023,PERQUIMANS / No municipality,Current NC registration elsewhere,2
+2023,PITT / GREENVILLE,Current NC registration elsewhere,1
+2023,RANDOLPH / RANDLEMAN,Current NC registration elsewhere,1
+2023,RUTHERFORD / No municipality,Current NC registration elsewhere,2
+2023,Removed record only,No current NC registration,393
+2023,STANLY / NORWOOD,Current NC registration elsewhere,2
+2023,UNION / INDIAN TRAIL,Current NC registration elsewhere,1
+2023,UNION / No municipality,Current NC registration elsewhere,1
+2023,UNION / STALLINGS,Current NC registration elsewhere,1
+2023,WAKE / CARY,Current NC registration elsewhere,2
+2023,WAKE / RALEIGH,Current NC registration elsewhere,4
+2023,WATAUGA / BOONE,Current NC registration elsewhere,2
+2023,WATAUGA / WATAUGA COUNTY,Current NC registration elsewhere,1
+2023,WILKES / WILKESBORO,Current NC registration elsewhere,1
+2024,ALAMANCE / BURLINGTON,Current NC registration elsewhere,1
+2024,ALAMANCE / SWEPSONVILLE,Current NC registration elsewhere,1
+2024,ALEXANDER / No municipality,Current NC registration elsewhere,1
+2024,ALLEGHANY / No municipality,Current NC registration elsewhere,3
+2024,Absent from NC snapshot,No current NC registration,7
+2024,BRUNSWICK / NAVASSA,Current NC registration elsewhere,2
+2024,BRUNSWICK / OAK ISLAND,Current NC registration elsewhere,2
+2024,BRUNSWICK / OCEAN ISLE BEACH,Current NC registration elsewhere,1
+2024,BRUNSWICK / SOUTHPORT,Current NC registration elsewhere,3
+2024,BRUNSWICK / SUNSET BEACH,Current NC registration elsewhere,1
+2024,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,6
+2024,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,2
+2024,BUNCOMBE / No municipality,Current NC registration elsewhere,2
+2024,BURKE / CITY OF MORGANTON,Current NC registration elsewhere,2
+2024,BURKE / No municipality,Current NC registration elsewhere,2
+2024,CABARRUS / CONCORD,Current NC registration elsewhere,6
+2024,CABARRUS / HARRISBURG,Current NC registration elsewhere,2
+2024,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,4
+2024,CABARRUS / MT PLEASANT,Current NC registration elsewhere,1
+2024,CALDWELL / HUDSON,Current NC registration elsewhere,1
+2024,CALDWELL / LENOIR,Current NC registration elsewhere,1
+2024,CARTERET / No municipality,Current NC registration elsewhere,1
+2024,CATAWBA / CONOVER,Current NC registration elsewhere,1
+2024,CATAWBA / HICKORY,Current NC registration elsewhere,4
+2024,CATAWBA / NEWTON,Current NC registration elsewhere,3
+2024,CATAWBA / No municipality,Current NC registration elsewhere,9
+2024,CHATHAM / No municipality,Current NC registration elsewhere,1
+2024,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,10
+2024,CLEVELAND / No municipality,Current NC registration elsewhere,9
+2024,CLEVELAND / PATTERSON SPRINGS,Current NC registration elsewhere,1
+2024,CLEVELAND / SHELBY,Current NC registration elsewhere,3
+2024,CRAVEN / CITY OF NEW BERN,Current NC registration elsewhere,1
+2024,CRAVEN / No municipality,Current NC registration elsewhere,2
+2024,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2024,CUMBERLAND / No municipality,Current NC registration elsewhere,1
+2024,DAVIDSON / No municipality,Current NC registration elsewhere,2
+2024,DURHAM / DURHAM,Current NC registration elsewhere,6
+2024,FORSYTH / KERNERSVILLE,Current NC registration elsewhere,1
+2024,FORSYTH / UNINCORPORATED,Current NC registration elsewhere,1
+2024,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,2
+2024,GASTON / BESSEMER CITY,Current NC registration elsewhere,4
+2024,GASTON / CHERRYVILLE,Current NC registration elsewhere,6
+2024,GASTON / CRAMERTON,Current NC registration elsewhere,66
+2024,GASTON / DALLAS,Current NC registration elsewhere,12
+2024,GASTON / GASTONIA,Current NC registration elsewhere,140
+2024,GASTON / HIGH SHOALS,Current NC registration elsewhere,1
+2024,GASTON / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2024,GASTON / LOWELL,Current NC registration elsewhere,13
+2024,GASTON / MCADENVILLE,Current NC registration elsewhere,4
+2024,GASTON / MT HOLLY,Current NC registration elsewhere,82
+2024,GASTON / No municipality,Current NC registration elsewhere,175
+2024,GASTON / RANLO,Current NC registration elsewhere,13
+2024,GASTON / STANLEY,Current NC registration elsewhere,11
+2024,GRANVILLE / BUTNER,Current NC registration elsewhere,1
+2024,GUILFORD / GREENSBORO,Current NC registration elsewhere,4
+2024,GUILFORD / HIGH POINT,Current NC registration elsewhere,2
+2024,GUILFORD / SUMMERFIELD,Current NC registration elsewhere,2
+2024,HAYWOOD / CANTON,Current NC registration elsewhere,1
+2024,HENDERSON / HENDERSONVILLE,Current NC registration elsewhere,2
+2024,HENDERSON / No municipality,Current NC registration elsewhere,5
+2024,IREDELL / No municipality,Current NC registration elsewhere,7
+2024,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,7
+2024,IREDELL / TOWN OF TROUTMAN,Current NC registration elsewhere,4
+2024,JACKSON / No municipality,Current NC registration elsewhere,4
+2024,JOHNSTON / TOWN OF CLAYTON,Current NC registration elsewhere,1
+2024,LEE / SANFORD,Current NC registration elsewhere,1
+2024,LINCOLN / LINCOLNTON,Current NC registration elsewhere,9
+2024,LINCOLN / No municipality,Current NC registration elsewhere,23
+2024,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,142
+2024,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,2
+2024,MECKLENBURG / DAVIDSON,Current NC registration elsewhere,1
+2024,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,9
+2024,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,4
+2024,MECKLENBURG / MINT HILL,Current NC registration elsewhere,2
+2024,MECKLENBURG / PINEVILLE,Current NC registration elsewhere,6
+2024,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,16
+2024,MONTGOMERY / No municipality,Current NC registration elsewhere,1
+2024,MOORE / NOT MUNICIPAL LIMITS,Current NC registration elsewhere,1
+2024,NEW HANOVER / No municipality,Current NC registration elsewhere,4
+2024,NEW HANOVER / WILMINGTON,Current NC registration elsewhere,9
+2024,ONSLOW / HOLLY RIDGE,Current NC registration elsewhere,2
+2024,ORANGE / CARRBORO,Current NC registration elsewhere,1
+2024,ORANGE / CHAPEL HILL,Current NC registration elsewhere,9
+2024,PENDER / No municipality,Current NC registration elsewhere,6
+2024,PERQUIMANS / No municipality,Current NC registration elsewhere,2
+2024,PITT / GREENVILLE,Current NC registration elsewhere,4
+2024,PITT / No municipality,Current NC registration elsewhere,1
+2024,POLK / No municipality,Current NC registration elsewhere,1
+2024,RANDOLPH / No municipality,Current NC registration elsewhere,1
+2024,ROCKINGHAM / No municipality,Current NC registration elsewhere,1
+2024,ROWAN / KANNAPOLIS,Current NC registration elsewhere,1
+2024,ROWAN / LANDIS,Current NC registration elsewhere,1
+2024,ROWAN / No municipality,Current NC registration elsewhere,3
+2024,ROWAN / SPENCER,Current NC registration elsewhere,2
+2024,RUTHERFORD / No municipality,Current NC registration elsewhere,2
+2024,Removed record only,No current NC registration,163
+2024,STOKES / No municipality,Current NC registration elsewhere,1
+2024,SURRY / No municipality,Current NC registration elsewhere,1
+2024,SWAIN / No municipality,Current NC registration elsewhere,1
+2024,TRANSYLVANIA / BREVARD,Current NC registration elsewhere,1
+2024,UNION / INDIAN TRAIL,Current NC registration elsewhere,3
+2024,UNION / MINERAL SPRINGS,Current NC registration elsewhere,1
+2024,UNION / MONROE,Current NC registration elsewhere,1
+2024,UNION / No municipality,Current NC registration elsewhere,3
+2024,UNION / STALLINGS,Current NC registration elsewhere,1
+2024,UNION / UNIONVILLE,Current NC registration elsewhere,1
+2024,UNION / WAXHAW,Current NC registration elsewhere,1
+2024,UNION / WINGATE,Current NC registration elsewhere,2
+2024,WAKE / APEX,Current NC registration elsewhere,2
+2024,WAKE / CARY,Current NC registration elsewhere,3
+2024,WAKE / KNIGHTDALE,Current NC registration elsewhere,1
+2024,WAKE / RALEIGH,Current NC registration elsewhere,18
+2024,WAKE / ROLESVILLE,Current NC registration elsewhere,1
+2024,WAKE / UNINCORPORATED,Current NC registration elsewhere,5
+2024,WAKE / ZEBULON,Current NC registration elsewhere,2
+2024,WATAUGA / BLOWING ROCK,Current NC registration elsewhere,2
+2024,WATAUGA / BOONE,Current NC registration elsewhere,8
+2024,WATAUGA / WATAUGA COUNTY,Current NC registration elsewhere,2
+2024,WAYNE / GOLDSBORO,Current NC registration elsewhere,2
+2025,ALAMANCE / BURLINGTON,Current NC registration elsewhere,1
+2025,ALAMANCE / GRAHAM,Current NC registration elsewhere,1
+2025,ASHE / No municipality,Current NC registration elsewhere,1
+2025,Absent from NC snapshot,No current NC registration,9
+2025,BRUNSWICK / CAROLINA SHORES,Current NC registration elsewhere,1
+2025,BRUNSWICK / CASWELL BEACH,Current NC registration elsewhere,1
+2025,BRUNSWICK / SOUTHPORT,Current NC registration elsewhere,1
+2025,BRUNSWICK / UNINCORPORATED,Current NC registration elsewhere,4
+2025,BUNCOMBE / CITY OF ASHEVILLE,Current NC registration elsewhere,3
+2025,BUNCOMBE / No municipality,Current NC registration elsewhere,1
+2025,BUNCOMBE / TOWN OF BLACK MOUNTAIN,Current NC registration elsewhere,1
+2025,BUNCOMBE / TOWN OF WEAVERVILLE,Current NC registration elsewhere,1
+2025,BURKE / No municipality,Current NC registration elsewhere,2
+2025,CABARRUS / CONCORD,Current NC registration elsewhere,3
+2025,CABARRUS / HARRISBURG,Current NC registration elsewhere,1
+2025,CABARRUS / KANNAPOLIS,Current NC registration elsewhere,2
+2025,CALDWELL / LENOIR,Current NC registration elsewhere,1
+2025,CATAWBA / HICKORY,Current NC registration elsewhere,1
+2025,CATAWBA / NEWTON,Current NC registration elsewhere,1
+2025,CATAWBA / No municipality,Current NC registration elsewhere,6
+2025,CLEVELAND / KINGS MOUNTAIN,Current NC registration elsewhere,1
+2025,CLEVELAND / No municipality,Current NC registration elsewhere,5
+2025,CLEVELAND / SHELBY,Current NC registration elsewhere,2
+2025,CUMBERLAND / FAYETTEVILLE,Current NC registration elsewhere,1
+2025,DAVIDSON / No municipality,Current NC registration elsewhere,1
+2025,DURHAM / DURHAM,Current NC registration elsewhere,1
+2025,FORSYTH / KERNERSVILLE,Current NC registration elsewhere,2
+2025,FORSYTH / WINSTON SALEM,Current NC registration elsewhere,2
+2025,FRANKLIN / TOWN OF LOUISBURG,Current NC registration elsewhere,1
+2025,GASTON / BESSEMER CITY,Current NC registration elsewhere,3
+2025,GASTON / CHERRYVILLE,Current NC registration elsewhere,4
+2025,GASTON / CRAMERTON,Current NC registration elsewhere,37
+2025,GASTON / DALLAS,Current NC registration elsewhere,4
+2025,GASTON / GASTONIA,Current NC registration elsewhere,60
+2025,GASTON / HIGH SHOALS,Current NC registration elsewhere,1
+2025,GASTON / LOWELL,Current NC registration elsewhere,7
+2025,GASTON / MCADENVILLE,Current NC registration elsewhere,9
+2025,GASTON / MT HOLLY,Current NC registration elsewhere,22
+2025,GASTON / No municipality,Current NC registration elsewhere,60
+2025,GASTON / RANLO,Current NC registration elsewhere,3
+2025,GASTON / STANLEY,Current NC registration elsewhere,2
+2025,GUILFORD / GREENSBORO,Current NC registration elsewhere,1
+2025,GUILFORD / No municipality,Current NC registration elsewhere,1
+2025,HARNETT / COATS,Current NC registration elsewhere,1
+2025,HARNETT / No municipality,Current NC registration elsewhere,1
+2025,HENDERSON / FLAT ROCK,Current NC registration elsewhere,1
+2025,HENDERSON / No municipality,Current NC registration elsewhere,1
+2025,IREDELL / CITY OF STATESVILLE,Current NC registration elsewhere,1
+2025,IREDELL / No municipality,Current NC registration elsewhere,2
+2025,IREDELL / TOWN OF MOORESVILLE,Current NC registration elsewhere,3
+2025,IREDELL / TOWN OF TROUTMAN,Current NC registration elsewhere,2
+2025,JACKSON / No municipality,Current NC registration elsewhere,2
+2025,LEE / SANFORD,Current NC registration elsewhere,1
+2025,LINCOLN / LINCOLNTON,Current NC registration elsewhere,5
+2025,LINCOLN / No municipality,Current NC registration elsewhere,9
+2025,MECKLENBURG / CHARLOTTE,Current NC registration elsewhere,93
+2025,MECKLENBURG / CORNELIUS,Current NC registration elsewhere,2
+2025,MECKLENBURG / HUNTERSVILLE,Current NC registration elsewhere,6
+2025,MECKLENBURG / MATTHEWS,Current NC registration elsewhere,2
+2025,MECKLENBURG / MINT HILL,Current NC registration elsewhere,1
+2025,MECKLENBURG / PINEVILLE,Current NC registration elsewhere,2
+2025,MECKLENBURG / UNINCORPORATED,Current NC registration elsewhere,17
+2025,MOORE / No municipality,Current NC registration elsewhere,1
+2025,NEW HANOVER / No municipality,Current NC registration elsewhere,4
+2025,ONSLOW / No municipality,Current NC registration elsewhere,1
+2025,PENDER / No municipality,Current NC registration elsewhere,2
+2025,PITT / GREENVILLE,Current NC registration elsewhere,3
+2025,POLK / No municipality,Current NC registration elsewhere,1
+2025,POLK / TRYON,Current NC registration elsewhere,1
+2025,RUTHERFORD / FOREST CITY,Current NC registration elsewhere,1
+2025,Removed record only,No current NC registration,596
+2025,STANLY / ALBEMARLE,Current NC registration elsewhere,1
+2025,UNION / INDIAN TRAIL,Current NC registration elsewhere,2
+2025,UNION / MONROE,Current NC registration elsewhere,1
+2025,UNION / No municipality,Current NC registration elsewhere,3
+2025,UNION / WESLEY CHAPEL,Current NC registration elsewhere,2
+2025,WAKE / APEX,Current NC registration elsewhere,4
+2025,WAKE / RALEIGH,Current NC registration elsewhere,4
+2025,WAKE / UNINCORPORATED,Current NC registration elsewhere,1
+2025,WAKE / WAKE FOREST,Current NC registration elsewhere,1
+2025,WATAUGA / BOONE,Current NC registration elsewhere,2
+2025,WATAUGA / No municipality,Current NC registration elsewhere,1
+2025,WATAUGA / WATAUGA COUNTY,Current NC registration elsewhere,1
+2025,WILKES / No municipality,Current NC registration elsewhere,2
+2025,WILSON / WILSON,Current NC registration elsewhere,1
