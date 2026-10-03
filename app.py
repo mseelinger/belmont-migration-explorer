@@ -34,7 +34,7 @@ total=int(view.arrivals.sum()); mapped=int(scoped.movers.sum())
 overview,origins,profile_tab,cohorts,methods=st.tabs(['Overview','Origins & maps','Profiles & departures','Cohort retention','Data & methods'])
 
 def chart(fig,annual_axis=False):
-    fig.update_layout(template=TEMPLATE,paper_bgcolor='#FFFFFF',plot_bgcolor='#FFFFFF',margin=dict(l=15,r=20,t=30,b=30),legend=dict(orientation='h',yanchor='bottom',y=1.02,xanchor='left',x=0),legend_title_text='',font=dict(color=NAVY))
+    fig.update_layout(template=TEMPLATE,paper_bgcolor='#FFFFFF',plot_bgcolor='#FFFFFF',margin=dict(l=65,r=30,t=35,b=45),legend=dict(orientation='h',yanchor='bottom',y=1.02,xanchor='left',x=0),legend_title_text='',font=dict(color=NAVY))
     if annual_axis: fig.update_xaxes(dtick=1)
     st.plotly_chart(fig,width='stretch',theme=None)
 
