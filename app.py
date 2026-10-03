@@ -5,12 +5,12 @@ import plotly.graph_objects as go
 import streamlit as st
 from model import load_bundle, filter_years, composition_shares
 from maps import migration_map, COLORS, LABELS
+from branding import apply_brand, footer, TEMPLATE, BLUE, ORANGE, NAVY, SLATE
 
 st.set_page_config(page_title='Belmont Migration Explorer | Tar Heel Tally',page_icon='📊',layout='wide')
 DATA=Path(__file__).parent/'data'
 if not DATA.exists(): DATA=Path(__file__).parent
-BLUE,ORANGE='#2878A5','#E78A38'
-st.caption('TAR HEEL TALLY · SNAPSHOTS 2016–2026')
+apply_brand()
 st.title('Belmont Migration Explorer')
 st.write('Explore Belmont’s registered electorate: arrivals, departures, origin evidence, and the cohorts still registered here.')
 @st.cache_data
@@ -21,19 +21,22 @@ except (ValueError,KeyError,OSError) as error:
     st.error(f'Unable to load the dataset: {error}'); st.stop()
 years=annual.year.tolist()
 with st.sidebar:
-    st.header('Explore the data')
+    st.caption('EXPLORER SETTINGS')
+    st.header('Choose your view')
     selected=st.select_slider('Years',options=years,value=(years[0],years[-1]))
     st.caption('A cohort year compares January 1 of that year with January 1 of the following year. Only Gaston County / Belmont records with status other than R are included.')
-    st.caption(f"{metadata['source_files']} source files integrated · Aggregate data only")
+    st.divider()
+    st.caption('BELMONT · GASTON COUNTY')
+    st.caption('11 snapshots · 2016–2026\n\nPublic aggregate data')
 view=filter_years(annual,'year',selected)
 scoped=filter_years(flows,'cohort_year',selected)
 total=int(view.arrivals.sum()); mapped=int(scoped.movers.sum())
 overview,origins,profile_tab,cohorts,methods=st.tabs(['Overview','Origins & maps','Profiles & departures','Cohort retention','Data & methods'])
 
 def chart(fig,annual_axis=False):
-    fig.update_layout(template='plotly_white',margin=dict(l=0,r=0,t=25,b=0),legend_title_text='',font=dict(color='#203344'))
+    fig.update_layout(template=TEMPLATE,margin=dict(l=0,r=0,t=25,b=0),legend_title_text='',font=dict(color=NAVY))
     if annual_axis: fig.update_xaxes(dtick=1)
-    st.plotly_chart(fig,width='stretch')
+    st.plotly_chart(fig,width='stretch',theme=None)
 
 def download(label,frame,name):
     st.download_button(label,frame.to_csv(index=False).encode(),name,'text/csv')
@@ -49,7 +52,7 @@ with overview:
     st.subheader('Arrivals and departures over time')
     fig=go.Figure(go.Bar(x=view.year,y=view.arrivals,name='Arrivals',marker_color=BLUE,hovertemplate='Year: %{x}<br>Arrivals: %{y:,}<extra></extra>'))
     fig.add_bar(x=view.year,y=view.departures,name='Departures',marker_color=ORANGE,hovertemplate='Year: %{x}<br>Departures: %{y:,}<extra></extra>')
-    fig.add_scatter(x=view.year,y=view.net_change,name='Net registration change',mode='lines+markers',line=dict(color='#203344'),hovertemplate='Year: %{x}<br>Net change: %{y:+,}<extra></extra>')
+    fig.add_scatter(x=view.year,y=view.net_change,name='Net registration change',mode='lines+markers',line=dict(color=NAVY),hovertemplate='Year: %{x}<br>Net change: %{y:+,}<extra></extra>')
     fig.update_layout(barmode='group',yaxis_title='Registration events')
     chart(fig,True)
     st.subheader('Electorate size and turnover')
@@ -84,7 +87,9 @@ with origins:
         left,right=st.columns(2)
         mode=left.radio('Map period',['Selected years combined','Animate annual cohorts'],horizontal=True)
         region=right.radio('Map view',['United States','North Carolina'],horizontal=True)
-        st.plotly_chart(migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region),width='stretch',key='migration_map')
+        map_fig=migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region)
+        map_fig.update_layout(template=TEMPLATE)
+        st.plotly_chart(map_fig,width='stretch',key='migration_map',theme=None)
         st.caption('Lines connect county/state centroids to Belmont. Line widths distinguish 1–10, 11–50, 51–200, 201–1,000, and over 1,000 arrivals. The top 10 orange and top 10 blue routes use dark colors; the rest are lighter. Rankings follow the selected filters and are recalculated for each animated year. The same width scale applies to every year. Hover along a line for its origin, count, and evidence. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
         ranking=filtered.groupby(['origin_name','origin_confidence'],as_index=False).movers.sum()
         top_names=ranking.groupby('origin_name').movers.sum().nlargest(20).index
@@ -192,3 +197,5 @@ with methods:
         inventory=pd.read_csv(DATA/'source_inventory.csv')
         st.dataframe(inventory,hide_index=True,width='stretch'); download('Download source inventory',inventory,'source_inventory.csv')
     st.caption('Source: the supplied ncsbe_migration Google Drive folder. Aggregates generated October 3, 2026. Reproduce with prepare_data.py against a local copy of the source folder.')
+
+footer()

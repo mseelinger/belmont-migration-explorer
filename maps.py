@@ -2,8 +2,8 @@
 import plotly.graph_objects as go
 import numpy as np
 
-COLORS={'OBSERVED':'#2878A5','HISTORICAL_OBSERVED':'#238C7C','INFERRED':'#E78A38'}
-DARK_COLORS={'OBSERVED':'#155A85','INFERRED':'#B95409'}
+COLORS={'OBSERVED':'#3F7CAC','HISTORICAL_OBSERVED':'#238C7C','INFERRED':'#D07A3A'}
+DARK_COLORS={'OBSERVED':'#062B55','INFERRED':'#AD5B27'}
 LIGHT_COLORS={'OBSERVED':'#BAD5E7','INFERRED':'#F4DCC3','HISTORICAL_OBSERVED':'#C4E1DC'}
 LABELS={'OBSERVED':'Prior NC registration','HISTORICAL_OBSERVED':'Historical NC evidence','INFERRED':'Inferred state proxy'}
 KEYS=['origin_name','origin_confidence','origin_lat','origin_lon','dest_lat','dest_lon']
@@ -51,7 +51,7 @@ def migration_map(flows, animate=False, years=None, region='United States'):
         result.append(go.Scattergeo(lon=[r.origin_lon for r in routes],lat=[r.origin_lat for r in routes],mode='markers',
             marker=dict(size=[5 if totals.get(tuple(getattr(r,c) for c in KEYS),0) else 0 for r in routes],color=[route_color(tuple(getattr(r,c) for c in KEYS)) for r in routes]),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} arrivals' for r in routes],hoverinfo='text',showlegend=False))
         result.append(go.Scattergeo(lon=[routes[0].dest_lon],lat=[routes[0].dest_lat],mode='markers+text',
-            marker=dict(size=10,color='#203344'),text=['Belmont'],textposition='bottom right',showlegend=False,hoverinfo='text'))
+            marker=dict(size=10,color='#062B55'),text=['Belmont'],textposition='bottom right',showlegend=False,hoverinfo='text'))
         return result
     sequence=years or sorted(flows.cohort_year.unique())
     fig=go.Figure(data=traces(flows[flows.cohort_year.eq(sequence[0])] if animate else flows))
