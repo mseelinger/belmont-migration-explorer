@@ -152,7 +152,7 @@ with cohorts:
     chart(px.line(r,x='years_since_arrival',y='Retention (%)',color='Cohort',markers=True,color_discrete_map=cohort_colors).update_layout(xaxis_title='Years since arrival snapshot',yaxis=dict(range=[0,105])))
     st.caption('Year 0 is the ending snapshot that identifies the arrival. Continuous presence means present in every observed annual snapshot; changes between snapshots cannot be detected. Recent cohorts have shorter follow-up.')
     heat=r.pivot(index='cohort_year',columns='snapshot_year',values='Retention (%)')
-    chart(px.imshow(heat,text_auto='.1f',color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='January 1 snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto').update_traces(texttemplate='%{z:.1f}%',hovertemplate='Cohort: %{y}<br>Snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>'))
+    chart(px.imshow(heat,color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='January 1 snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto').update_traces(text=heat.map(lambda value:f'{value:.1f}%' if pd.notna(value) else '').to_numpy(),texttemplate='%{text}',hovertemplate='Cohort: %{y}<br>Snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>'))
     download('Download cohort retention',r.drop(columns=['Cohort']),'cohort_retention.csv')
     st.subheader('Composition of the January 1, 2026 electorate')
     st.caption('Each currently registered voter is assigned to their latest observed arrival spell, or to Before 2016 if no later re-entry was observed. This fixed snapshot is independent of the sidebar range.')
