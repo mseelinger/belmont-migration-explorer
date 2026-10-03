@@ -28,10 +28,10 @@ def apply_brand():
     :root { --tally-navy:#062B55; --tally-blue:#3F7CAC; --tally-cream:#F7EFE4; }
     .stApp, [data-testid="stAppViewContainer"] { background:#F7EFE4; color:#062B55; }
     [data-testid="stHeader"] { background:rgba(247,239,228,.95); }
-    [data-testid="stMainBlockContainer"] { max-width:1440px; padding:2rem 3.5rem 4rem; }
+    [data-testid="stMainBlockContainer"] { max-width:1440px; padding:4.5rem 3.5rem 4rem; }
     [data-testid="stSidebar"] { background:#EEE6DA; border-right:1px solid #D8D3CA; }
     [data-testid="stSidebar"] h2 { font-size:1.15rem; color:#062B55; }
-    h1 { color:#062B55; font-family:Georgia,'Times New Roman',serif; letter-spacing:-.035em; }
+    [data-testid="stMarkdownContainer"] h1 { color:#062B55; font-family:Georgia,'Times New Roman',serif !important; letter-spacing:-.035em; }
     h2,h3 { color:#062B55; letter-spacing:-.025em; }
     [data-testid="stMarkdownContainer"] p { line-height:1.65; }
     [data-testid="stCaptionContainer"] { color:#5C7088; }
@@ -55,7 +55,7 @@ def apply_brand():
     [data-testid="stAlert"] { border-radius:6px; font-size:.9rem; border:1px solid #E6D8C2; }
     [data-testid="stExpander"] { border-color:#D8D3CA; border-radius:6px; }
     @media(max-width:800px) {
-      [data-testid="stMainBlockContainer"] { padding:1.25rem 1rem 3rem; }
+      [data-testid="stMainBlockContainer"] { padding:4rem 1rem 3rem; }
       .tally-wordmark { width:210px; }
       .tally-publication { font-size:.6rem; }
       [data-testid="stTabs"] [role="tab"] { padding:.5rem .6rem; font-size:.8rem; }
