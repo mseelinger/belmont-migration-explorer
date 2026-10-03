@@ -60,8 +60,22 @@ def test_map_animation_totals_and_widths():
     assert len(fig.frames)==10
     for frame in fig.frames:
         lines=frame.data[:-2]
-        assert sum(int(t.text.split('<br>')[1].split()[0].replace(',','')) for t in lines)==int(flows.loc[flows.cohort_year.eq(int(frame.name)),'movers'].sum())
-        assert all(0<=t.line.width<=11.2 for t in lines)
+        assert sum(int(t.text[0].split('<br>')[1].split()[1].replace(',','')) for t in lines)==int(flows.loc[flows.cohort_year.eq(int(frame.name)),'movers'].sum())
+        assert all(0<=t.line.width<=15 for t in lines)
 
-        counts=[int(t.text.split('<br>')[1].split()[0].replace(',','')) for t in lines]
+        counts=[int(t.text[0].split('<br>')[1].split()[1].replace(',','')) for t in lines]
         assert all(size==0 for size,count in zip(frame.data[-2].marker.size,counts) if count==0)
+
+
+def test_cumulative_composition_and_map_widths():
+    from model import composition_shares
+    from maps import line_width, route_points
+    c=composition_shares(pd.read_csv(Path(__file__).parent/'current_composition.csv'))
+    before2017=c[c['Arrived before'].eq('Before 2017')].iloc[0]
+    assert before2017['Cumulative voters']==3042+717
+    assert c.iloc[-1]['Cumulative voters']==13057
+    assert c.iloc[-1]['Cumulative share (%)']==100
+    assert c['Cumulative voters'].is_monotonic_increasing
+    assert [line_width(n) for n in [0,1,11,51,201,1001]]==[0,1,2.5,5,9,15]
+    lon,lat=route_points(40,-74,35.221172,-81.040091)
+    assert len(lon)==240 and abs(lon[-1]+81.040091)<1e-8

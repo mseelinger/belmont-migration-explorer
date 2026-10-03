@@ -105,3 +105,15 @@ def load_bundle(directory):
     ranges=load_table(directory/'arrival_ranges.csv',['start_year','end_year','arrival_events','unique_arrivals'],['start_year','end_year','arrival_events','unique_arrivals'],['start_year','end_year'])
     metadata=json.loads((directory/'data_metadata.json').read_text())
     return annual,flows,coverage,profiles,retention,destinations,composition,ranges,metadata
+
+
+def composition_shares(composition):
+    frame=composition.copy()
+    frame['cohort_order']=pd.to_numeric(frame.arrival_cohort,errors='coerce').fillna(2015).astype(int)
+    frame=frame.sort_values('cohort_order')
+    total=int(frame.voters.sum())
+    frame['Share (%)']=100*frame.voters/total
+    frame['Arrived before']=frame.cohort_order.add(1).map(lambda year:f'Before {year}')
+    frame['Cumulative voters']=frame.voters.cumsum()
+    frame['Cumulative share (%)']=100*frame['Cumulative voters']/total
+    return frame

@@ -3,7 +3,7 @@ import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
 import streamlit as st
-from model import load_bundle, filter_years
+from model import load_bundle, filter_years, composition_shares
 from maps import migration_map, COLORS, LABELS
 
 st.set_page_config(page_title='Belmont Migration Explorer | Tar Heel Tally',page_icon='📊',layout='wide')
@@ -85,7 +85,7 @@ with origins:
         mode=left.radio('Map period',['Selected years combined','Animate annual cohorts'],horizontal=True)
         region=right.radio('Map view',['United States','North Carolina'],horizontal=True)
         st.plotly_chart(migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region),width='stretch',key='migration_map')
-        st.caption('Lines connect county/state centroids to Belmont. Line width increases with arrival counts on a square-root scale, making smaller flows visible; annual animation uses a fixed scale across years. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
+        st.caption('Lines connect county/state centroids to Belmont. Line widths distinguish 1–10, 11–50, 51–200, 201–1,000, and over 1,000 arrivals. The same scale applies to every year. Hover along a line for its origin, count, and evidence. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
         ranking=filtered.groupby(['origin_name','origin_confidence'],as_index=False).movers.sum()
         top_names=ranking.groupby('origin_name').movers.sum().nlargest(20).index
         top=ranking[ranking.origin_name.isin(top_names)].copy(); top['Evidence']=top.origin_confidence.map(LABELS)
@@ -156,11 +156,17 @@ with cohorts:
     download('Download cohort retention',r.drop(columns=['Cohort']),'cohort_retention.csv')
     st.subheader('Composition of the January 1, 2026 electorate')
     st.caption('Each currently registered voter is assigned to their latest observed arrival spell, or to Before 2016 if no later re-entry was observed. This fixed snapshot is independent of the sidebar range.')
-    c=composition.copy()
-    c=c.sort_values('arrival_cohort',key=lambda values:pd.to_numeric(values,errors='coerce').fillna(2015))
-    c['Share (%)']=(100*c.voters/c.voters.sum()).round(1)
-    chart(px.bar(c,x='arrival_cohort',y='voters',color_discrete_sequence=[BLUE]).update_layout(xaxis_title='Latest arrival cohort',yaxis_title='Registered voters',xaxis_type='category'))
-    st.dataframe(c,hide_index=True,width='stretch',column_config={'Share (%)':st.column_config.NumberColumn(format='%.1f')})
+    c=composition_shares(composition)
+    fig=px.bar(c,x='arrival_cohort',y='Share (%)',text='Share (%)',custom_data=['voters'],color_discrete_sequence=[BLUE])
+    fig.update_traces(texttemplate='%{y:.1f}%',hovertemplate='Cohort: %{x}<br>Voters: %{customdata[0]:,}<br>Share: %{y:.1f}%<extra></extra>')
+    fig.update_layout(xaxis_title='Latest arrival cohort',yaxis_title='Share of the 2026 electorate',xaxis_type='category',yaxis_ticksuffix='%')
+    chart(fig)
+    st.subheader('Cumulative cohort share')
+    st.caption('Before 2017 includes Before 2016 and the 2016 cohort; Before 2018 adds the 2017 cohort, and so on. Counts include voters still registered on January 1, 2026, assigned to their latest observed arrival spell.')
+    fig=px.line(c,x='Arrived before',y='Cumulative share (%)',markers=True,text='Cumulative share (%)',custom_data=['Cumulative voters'],color_discrete_sequence=['#084594'])
+    fig.update_traces(texttemplate='%{y:.1f}%',textposition='top center',hovertemplate='%{x}<br>Voters: %{customdata[0]:,}<br>Cumulative share: %{y:.1f}%<extra></extra>')
+    fig.update_layout(xaxis_title='Arrival cutoff (exclusive)',yaxis_title='Cumulative share of the 2026 electorate',yaxis=dict(range=[0,110],ticksuffix='%'))
+    chart(fig)
     download('Download 2026 electorate composition',c,'electorate_composition_2026.csv')
 
 with methods:

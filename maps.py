@@ -1,31 +1,46 @@
 """Aggregate origin maps with comparable widths across animation frames."""
 import plotly.graph_objects as go
-import math
+import numpy as np
 
 COLORS={'OBSERVED':'#2878A5','HISTORICAL_OBSERVED':'#238C7C','INFERRED':'#E78A38'}
 LABELS={'OBSERVED':'Prior NC registration','HISTORICAL_OBSERVED':'Historical NC evidence','INFERRED':'Inferred state proxy'}
 KEYS=['origin_name','origin_confidence','origin_lat','origin_lon','dest_lat','dest_lon']
 
+def line_width(count):
+    if count == 0: return 0
+    for upper, width in [(10,1),(50,2.5),(200,5),(1000,9)]:
+        if count <= upper: return width
+    return 15
+
+
+def route_points(origin_lat, origin_lon, dest_lat, dest_lon):
+    # Dense great-circle points let Plotly detect hover along the entire line.
+    lat, lon = np.radians([origin_lat,dest_lat]), np.radians([origin_lon,dest_lon])
+    vectors=np.column_stack([np.cos(lat)*np.cos(lon),np.cos(lat)*np.sin(lon),np.sin(lat)])
+    angle=np.arccos(np.clip(np.dot(*vectors),-1,1))
+    t=np.linspace(0,1,240)
+    if angle<1e-9: points=np.repeat(vectors[:1],len(t),axis=0)
+    else: points=(np.sin((1-t)*angle)[:,None]*vectors[0]+np.sin(t*angle)[:,None]*vectors[1])/np.sin(angle)
+    return np.degrees(np.arctan2(points[:,1],points[:,0])),np.degrees(np.arctan2(points[:,2],np.hypot(points[:,0],points[:,1])))
+
+
 def migration_map(flows, animate=False, years=None, region='United States'):
     grouped=flows.groupby(KEYS,as_index=False).movers.sum()
-    routes=list(grouped.itertuples(index=False))
-    if animate:
-        maximum=flows.groupby(['cohort_year']+KEYS).movers.sum().max()
-    else:
-        maximum=grouped.movers.max()
+    routes=list(grouped.sort_values('movers').itertuples(index=False))
     def traces(frame):
         totals=frame.groupby(KEYS).movers.sum().to_dict()
         result=[]; seen=set()
         for route in routes:
             key=tuple(getattr(route,c) for c in KEYS)
             count=int(totals.get(key,0)); evidence=route.origin_confidence
-            result.append(go.Scattergeo(lon=[route.origin_lon,route.dest_lon],lat=[route.origin_lat,route.dest_lat],
-                mode='lines',line=dict(width=1.2+10*math.sqrt(count/maximum) if count else 0,color=COLORS.get(evidence,'#697987')),
+            lon,lat=route_points(route.origin_lat,route.origin_lon,route.dest_lat,route.dest_lon)
+            result.append(go.Scattergeo(lon=lon,lat=lat,
+                mode='lines',line=dict(width=line_width(count),color=COLORS.get(evidence,'#697987')),
                 opacity=.95 if count else 0, name=LABELS.get(evidence,evidence),legendgroup=evidence,
                 showlegend=evidence not in seen,
-                text=f'{route.origin_name} → Belmont<br>{count:,} arrivals<br>{LABELS.get(evidence,evidence)}',hoverinfo='text'))
+                text=[f'{route.origin_name} → Belmont<br>Arrivals: {count:,}<br>{LABELS.get(evidence,evidence)}']*len(lon),hovertemplate='%{text}<extra></extra>'))
             seen.add(evidence)
-        result.append(go.Scattergeo(lon=grouped.origin_lon,lat=grouped.origin_lat,mode='markers',
+        result.append(go.Scattergeo(lon=[r.origin_lon for r in routes],lat=[r.origin_lat for r in routes],mode='markers',
             marker=dict(size=[5 if totals.get(tuple(getattr(r,c) for c in KEYS),0) else 0 for r in routes],color='#526875'),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} arrivals' for r in routes],hoverinfo='text',showlegend=False))
         result.append(go.Scattergeo(lon=[routes[0].dest_lon],lat=[routes[0].dest_lat],mode='markers+text',
             marker=dict(size=10,color='#203344'),text=['Belmont'],textposition='bottom right',showlegend=False,hoverinfo='text'))
@@ -42,5 +57,5 @@ def migration_map(flows, animate=False, years=None, region='United States'):
     geo=dict(scope='usa',projection_type='albers usa',showland=True,landcolor='#EDF1F4',showsubunits=True,subunitcolor='white')
     if region=='North Carolina':
         geo.update(scope='north america',projection_type='mercator',lonaxis_range=[-85,-75],lataxis_range=[33,37.5],showcountries=True)
-    fig.update_layout(geo=geo,height=540,margin=dict(l=0,r=0,t=0,b=70 if animate else 0),legend=dict(orientation='h',y=1.05),paper_bgcolor='white')
+    fig.update_layout(hovermode='closest',hoverdistance=12,geo=geo,height=540,margin=dict(l=0,r=0,t=0,b=70 if animate else 0),legend=dict(orientation='h',y=1.05),paper_bgcolor='white')
     return fig
