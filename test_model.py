@@ -79,3 +79,18 @@ def test_cumulative_composition_and_map_widths():
     assert [line_width(n) for n in [0,1,11,51,201,1001]]==[0,1,2.5,5,9,15]
     lon,lat=route_points(40,-74,35.221172,-81.040091)
     assert len(lon)==240 and abs(lon[-1]+81.040091)<1e-8
+
+
+def test_top_ten_map_route_highlights():
+    from maps import migration_map, DARK_COLORS, LIGHT_COLORS
+    from model import load_map_flows
+    flows=load_map_flows(Path(__file__).parent/'flows_enriched.csv')
+    fig=migration_map(flows,animate=True,years=[2016,2017])
+    for traces in [fig.data]+[frame.data for frame in fig.frames]:
+        for evidence,dark in DARK_COLORS.items():
+            matching=[t for t in traces[:-2] if t.legendgroup==evidence and t.opacity>0]
+            assert sum(t.line.color==dark for t in matching)==min(10,len(matching))
+            counts=lambda t:int(t.text[0].split('<br>')[1].split()[1].replace(',',''))
+            dark_counts=[counts(t) for t in matching if t.line.color==dark]
+            light_counts=[counts(t) for t in matching if t.line.color==LIGHT_COLORS[evidence]]
+            if light_counts: assert min(dark_counts)>=max(light_counts)

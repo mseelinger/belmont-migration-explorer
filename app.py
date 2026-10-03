@@ -85,7 +85,7 @@ with origins:
         mode=left.radio('Map period',['Selected years combined','Animate annual cohorts'],horizontal=True)
         region=right.radio('Map view',['United States','North Carolina'],horizontal=True)
         st.plotly_chart(migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region),width='stretch',key='migration_map')
-        st.caption('Lines connect county/state centroids to Belmont. Line widths distinguish 1–10, 11–50, 51–200, 201–1,000, and over 1,000 arrivals. The same scale applies to every year. Hover along a line for its origin, count, and evidence. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
+        st.caption('Lines connect county/state centroids to Belmont. Line widths distinguish 1–10, 11–50, 51–200, 201–1,000, and over 1,000 arrivals. The top 10 orange and top 10 blue routes use dark colors; the rest are lighter. Rankings follow the selected filters and are recalculated for each animated year. The same width scale applies to every year. Hover along a line for its origin, count, and evidence. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
         ranking=filtered.groupby(['origin_name','origin_confidence'],as_index=False).movers.sum()
         top_names=ranking.groupby('origin_name').movers.sum().nlargest(20).index
         top=ranking[ranking.origin_name.isin(top_names)].copy(); top['Evidence']=top.origin_confidence.map(LABELS)

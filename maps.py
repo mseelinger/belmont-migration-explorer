@@ -3,6 +3,8 @@ import plotly.graph_objects as go
 import numpy as np
 
 COLORS={'OBSERVED':'#2878A5','HISTORICAL_OBSERVED':'#238C7C','INFERRED':'#E78A38'}
+DARK_COLORS={'OBSERVED':'#155A85','INFERRED':'#B95409'}
+LIGHT_COLORS={'OBSERVED':'#BAD5E7','INFERRED':'#F4DCC3','HISTORICAL_OBSERVED':'#C4E1DC'}
 LABELS={'OBSERVED':'Prior NC registration','HISTORICAL_OBSERVED':'Historical NC evidence','INFERRED':'Inferred state proxy'}
 KEYS=['origin_name','origin_confidence','origin_lat','origin_lon','dest_lat','dest_lon']
 
@@ -29,19 +31,25 @@ def migration_map(flows, animate=False, years=None, region='United States'):
     routes=list(grouped.sort_values('movers').itertuples(index=False))
     def traces(frame):
         totals=frame.groupby(KEYS).movers.sum().to_dict()
+        highlighted=set()
+        for evidence in DARK_COLORS:
+            ranked=sorted(((key,count) for key,count in totals.items() if key[1]==evidence and count>0),key=lambda item:(-item[1],item[0][0]))
+            highlighted.update(key for key,count in ranked[:10])
+        def route_color(key):
+            return DARK_COLORS[key[1]] if key in highlighted else LIGHT_COLORS.get(key[1],'#D8E0E5')
         result=[]; seen=set()
         for route in routes:
             key=tuple(getattr(route,c) for c in KEYS)
             count=int(totals.get(key,0)); evidence=route.origin_confidence
             lon,lat=route_points(route.origin_lat,route.origin_lon,route.dest_lat,route.dest_lon)
             result.append(go.Scattergeo(lon=lon,lat=lat,
-                mode='lines',line=dict(width=line_width(count),color=COLORS.get(evidence,'#697987')),
+                mode='lines',line=dict(width=line_width(count),color=route_color(key)),
                 opacity=.95 if count else 0, name=LABELS.get(evidence,evidence),legendgroup=evidence,
                 showlegend=evidence not in seen,
                 text=[f'{route.origin_name} → Belmont<br>Arrivals: {count:,}<br>{LABELS.get(evidence,evidence)}']*len(lon),hovertemplate='%{text}<extra></extra>'))
             seen.add(evidence)
         result.append(go.Scattergeo(lon=[r.origin_lon for r in routes],lat=[r.origin_lat for r in routes],mode='markers',
-            marker=dict(size=[5 if totals.get(tuple(getattr(r,c) for c in KEYS),0) else 0 for r in routes],color='#526875'),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} arrivals' for r in routes],hoverinfo='text',showlegend=False))
+            marker=dict(size=[5 if totals.get(tuple(getattr(r,c) for c in KEYS),0) else 0 for r in routes],color=[route_color(tuple(getattr(r,c) for c in KEYS)) for r in routes]),text=[f'{r.origin_name}: {int(totals.get(tuple(getattr(r,c) for c in KEYS),0)):,} arrivals' for r in routes],hoverinfo='text',showlegend=False))
         result.append(go.Scattergeo(lon=[routes[0].dest_lon],lat=[routes[0].dest_lat],mode='markers+text',
             marker=dict(size=10,color='#203344'),text=['Belmont'],textposition='bottom right',showlegend=False,hoverinfo='text'))
         return result
