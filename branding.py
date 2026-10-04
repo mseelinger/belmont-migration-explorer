@@ -65,7 +65,7 @@ def apply_brand(compact=False):
     }
     </style>''')
     mobile_rules = [
-        ('[data-testid="stMainBlockContainer"]', 'padding:4rem .9rem 2rem; max-width:460px;'),
+        ('[data-testid="stMainBlockContainer"]', 'padding:4rem .9rem 2rem; max-width:420px;'),
         ('.tally-masthead', 'gap:.5rem; padding-bottom:.8rem;'),
         ('.tally-wordmark', 'width:160px; max-width:46%;'),
         ('.tally-publication', 'font-size:.56rem; letter-spacing:.08em;'),
@@ -85,6 +85,7 @@ def apply_brand(compact=False):
         ('[data-baseweb="select"]', 'min-height:44px;'),
         ('.tally-footer', 'flex-direction:column; gap:.3rem;'),
         ('.st-key-retention_triangle', 'overflow-x:auto; overscroll-behavior-x:contain; padding-bottom:.5rem;'),
+        ('.st-key-retention_triangle [data-testid="stFullScreenFrame"]', 'min-width:720px;'),
         ('.st-key-retention_triangle [data-testid="stPlotlyChart"]', 'min-width:720px;'),
         ('.modebar-btn', 'padding:8px !important;'),
     ]
