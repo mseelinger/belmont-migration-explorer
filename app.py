@@ -1,4 +1,5 @@
 from pathlib import Path
+import textwrap
 import pandas as pd
 import plotly.express as px
 import plotly.graph_objects as go
@@ -10,9 +11,6 @@ from branding import apply_brand, footer, TEMPLATE, BLUE, ORANGE, NAVY, SLATE
 st.set_page_config(page_title='Belmont Migration Explorer | Tar Heel Tally',page_icon='📊',layout='wide')
 DATA=Path(__file__).parent/'data'
 if not DATA.exists(): DATA=Path(__file__).parent
-apply_brand()
-st.title('Belmont Migration Explorer')
-st.write('Explore Belmont’s registered electorate: arrivals, departures, origin evidence, and the cohorts still registered here.')
 @st.cache_data
 def dataset(directory): return load_bundle(Path(directory))
 try:
@@ -24,10 +22,15 @@ with st.sidebar:
     st.caption('EXPLORER SETTINGS')
     st.header('Choose your view')
     selected=st.select_slider('Years',options=years,value=(years[0],years[-1]))
+    user_agent=st.context.headers.get('User-Agent','').lower()
+    compact=st.toggle('Compact layout',value=any(token in user_agent for token in ['mobile','android','iphone','ipad']),help='A phone-friendly view with shorter labels and larger tap targets. Turn it off for the full-width layout.')
     st.caption('A cohort year compares January 1 of that year with January 1 of the following year. Only Gaston County / Belmont records with status other than R are included.')
     st.divider()
     st.caption('BELMONT · GASTON COUNTY')
     st.caption('11 snapshots · 2016–2026\n\nPublic aggregate data')
+apply_brand(compact)
+st.title('Belmont Migration Explorer')
+st.write('Explore Belmont’s registered electorate: arrivals, departures, origin evidence, and the cohorts still registered here.')
 view=filter_years(annual,'year',selected)
 scoped=filter_years(flows,'cohort_year',selected)
 total=int(view.arrivals.sum()); mapped=int(scoped.movers.sum())
@@ -46,7 +49,25 @@ def chart(fig,annual_axis=False):
         if sum(trace.type == 'bar' for trace in fig.data) > 1:
             fig.update_layout(margin_t=90,legend=dict(y=1.10,yanchor='bottom',yref='paper'))
     if annual_axis: fig.update_xaxes(dtick=1)
-    st.plotly_chart(fig,width='stretch',theme=None)
+    if compact:
+        fig.update_layout(font_size=11,margin=dict(l=48,r=15,t=95,b=65),legend=dict(y=1.12,yanchor='bottom',font_size=10))
+        for trace in fig.data:
+            trace.name={'Prior NC registration':'Prior NC','Historical NC evidence':'Historical NC','Inferred state proxy':'State proxy','Arrivals / ending electorate':'Arrival rate','Departures / starting electorate':'Departure rate'}.get(trace.name,trace.name)
+        fig.update_xaxes(automargin=True,tickfont_size=10)
+        fig.update_yaxes(automargin=True,tickfont_size=10)
+        horizontal=[trace for trace in fig.data if trace.type=='bar' and trace.orientation=='h']
+        if horizontal:
+            labels=list(dict.fromkeys(str(label) for trace in horizontal for label in trace.y))
+            fig.update_yaxes(tickmode='array',tickvals=labels,ticktext=['<br>'.join(textwrap.wrap(label,18)) for label in labels])
+            fig.update_layout(margin_l=125,height=max(450,len(labels)*42+160))
+            fig.update_xaxes(tickformat='~s')
+        if any(trace.type=='heatmap' for trace in fig.data):
+            fig.update_layout(margin=dict(l=65,r=30,t=90,b=30),height=570)
+        elif not horizontal:
+            fig.update_layout(height=460)
+            if fig.layout.xaxis.type=='category':
+                fig.update_xaxes(tickangle=-45)
+    st.plotly_chart(fig,width='stretch',theme=None,config={'scrollZoom':False,'displayModeBar':True if compact else 'hover','modeBarButtonsToRemove':['zoom2d','pan2d','zoomIn2d','zoomOut2d','autoScale2d','select2d','lasso2d'] if compact else []})
 
 def download(label,frame,name):
     st.download_button(label,frame.to_csv(index=False).encode(),name,'text/csv')
@@ -100,7 +121,12 @@ with origins:
         region=right.radio('Map view',['United States','North Carolina'],horizontal=True)
         map_fig=migration_map(filtered,animate=mode=='Animate annual cohorts',years=view.year.tolist(),region=region)
         map_fig.update_layout(template=TEMPLATE)
-        st.plotly_chart(map_fig,width='stretch',key='migration_map',theme=None)
+        if compact:
+            for trace in map_fig.data:
+                trace.name={'Prior NC registration':'Prior NC','Historical NC evidence':'Historical NC','Inferred state proxy':'State proxy'}.get(trace.name,trace.name)
+            map_fig.update_layout(height=430,margin=dict(l=0,r=0,t=75,b=100 if mode=='Animate annual cohorts' else 15),legend=dict(y=1.12,yanchor='bottom',font_size=10))
+        st.plotly_chart(map_fig,width='stretch',key='migration_map',theme=None,config={'scrollZoom':False})
+        if compact: st.caption('Tap a line or origin for details. Use the chart’s fullscreen control for a larger view.')
         st.caption('Lines connect county/state centroids to Belmont. Line widths distinguish 1–10, 11–50, 51–200, 201–1,000, and over 1,000 arrivals. The top 10 orange and top 10 blue routes use dark colors; the rest are lighter. Rankings follow the selected filters and are recalculated for each animated year. The same width scale applies to every year. Hover along a line for its origin, count, and evidence. Unmapped arrivals are excluded. The NC view clips origins outside the displayed region.')
         ranking=filtered.groupby(['origin_name','origin_confidence'],as_index=False).movers.sum()
         top_names=ranking.groupby('origin_name').movers.sum().nlargest(20).index
@@ -175,7 +201,9 @@ with cohorts:
     fig.update_traces(text=heat.map(lambda value:f'{value:.1f}%' if pd.notna(value) else '').to_numpy(),texttemplate='%{text}',hovertemplate='Cohort: %{y}<br>Years since arrival snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>')
     fig.update_xaxes(side='top',dtick=1,showgrid=False,zeroline=False,tickmode='array',tickvals=heat.columns.tolist(),ticktext=[f'Year {int(y)}' for y in heat.columns])
     fig.update_yaxes(autorange='reversed',dtick=1,showgrid=False,zeroline=False)
-    chart(fig)
+    if compact: st.caption('Swipe sideways across the triangle to see later years. Tap a cell for its exact percentage.')
+    with st.container(key='retention_triangle'):
+        chart(fig)
     download('Download cohort retention',r.drop(columns=['Cohort']),'cohort_retention.csv')
     st.subheader('Composition of the January 1, 2026 electorate')
     st.caption('Each currently registered voter is assigned to their latest observed arrival spell, or to Before 2016 if no later re-entry was observed. This fixed snapshot is independent of the sidebar range.')

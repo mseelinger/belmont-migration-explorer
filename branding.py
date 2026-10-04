@@ -23,7 +23,7 @@ TEMPLATE=go.layout.Template(layout=dict(
     margin=dict(l=15,r=20,t=30,b=30)))
 
 
-def apply_brand():
+def apply_brand(compact=False):
     st.html('''<style>
     :root { --tally-navy:#062B55; --tally-blue:#3F7CAC; --tally-cream:#F7EFE4; }
     .stApp, [data-testid="stAppViewContainer"] { background:#F7EFE4; color:#062B55; }
@@ -64,6 +64,35 @@ def apply_brand():
       [data-testid="stMetricValue"] { font-size:1.6rem; }
     }
     </style>''')
+    mobile_rules = [
+        ('[data-testid="stMainBlockContainer"]', 'padding:4rem .9rem 2rem; max-width:460px;'),
+        ('.tally-masthead', 'gap:.5rem; padding-bottom:.8rem;'),
+        ('.tally-wordmark', 'width:160px; max-width:46%;'),
+        ('.tally-publication', 'font-size:.56rem; letter-spacing:.08em;'),
+        ('.tally-kicker', 'font-size:.62rem; letter-spacing:.09em;'),
+        ('[data-testid="stMarkdownContainer"] h1', 'font-size:2rem; line-height:1.12;'),
+        ('[data-testid="stMarkdownContainer"] h3', 'font-size:1.2rem; line-height:1.3;'),
+        ('[data-testid="stCaptionContainer"]', 'font-size:.8rem; color:#52677E;'),
+        ('[data-testid="stTabs"] [role="tablist"]', 'flex-wrap:wrap; overflow:visible; gap:.3rem; padding-bottom:.6rem;'),
+        ('[data-testid="stTabs"] [role="tab"]', 'min-height:44px; padding:.6rem .7rem; flex-shrink:0;'),
+        ('[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"])', 'flex-direction:row !important; flex-wrap:wrap; gap:.65rem;'),
+        ('[data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > [data-testid="stColumn"]', 'flex:1 1 calc(50% - .65rem) !important; min-width:0 !important; width:calc(50% - .65rem) !important;'),
+        ('[data-testid="stMetric"]', 'padding:.8rem; min-height:120px; height:120px;'),
+        ('[data-testid="stMetricValue"]', 'font-size:1.6rem;'),
+        ('.st-key-origin_cards [data-testid="stHorizontalBlock"]:has([data-testid="stMetric"]) > [data-testid="stColumn"]', 'flex:1 1 100% !important; width:100% !important;'),
+        ('.st-key-origin_cards [data-testid="stMetric"]', 'height:130px;'),
+        ('[data-testid="stDownloadButton"] button', 'min-height:44px; width:100%;'),
+        ('[data-baseweb="select"]', 'min-height:44px;'),
+        ('.tally-footer', 'flex-direction:column; gap:.3rem;'),
+        ('.st-key-retention_triangle', 'overflow-x:auto; overscroll-behavior-x:contain; padding-bottom:.5rem;'),
+        ('.st-key-retention_triangle [data-testid="stPlotlyChart"]', 'min-width:720px;'),
+        ('.modebar-btn', 'padding:8px !important;'),
+    ]
+    responsive = ''.join(selector+' {'+rules+'}' for selector,rules in mobile_rules)
+    forced = ''.join('.stApp:has(.tally-compact-marker) '+selector+' {'+rules+'}' for selector,rules in mobile_rules)
+    st.html('<style>@media(max-width:640px) {'+responsive+'}'+forced+'</style>')
+    if compact:
+        st.html('<span class="tally-compact-marker" aria-hidden="true"></span>')
     logo=base64.b64encode((Path(__file__).parent/'brand-wordmark.png').read_bytes()).decode()
     st.html(f'<div class="tally-masthead"><img class="tally-wordmark" src="data:image/png;base64,{logo}" alt="Tar Heel Tally"><div class="tally-publication">Less spin. More substance.<br>North Carolina, by the numbers.</div></div>')
     st.html('<div class="tally-kicker">Data explorer / Belmont, North Carolina</div>')
