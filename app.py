@@ -35,6 +35,8 @@ overview,origins,profile_tab,cohorts,methods=st.tabs(['Overview','Origins & maps
 
 def chart(fig,annual_axis=False):
     fig.update_layout(template=TEMPLATE,paper_bgcolor='#FFFFFF',plot_bgcolor='#FFFFFF',margin=dict(l=65,r=30,t=35,b=45),legend=dict(orientation='h',yanchor='bottom',y=1.02,xanchor='left',x=0),legend_title_text='',font=dict(color=NAVY))
+    if any(trace.type == 'heatmap' for trace in fig.data):
+        fig.update_layout(margin_t=90,height=570)
     if any(trace.type == 'scatter' and 'lines' in (trace.mode or '') for trace in fig.data):
         fig.update_xaxes(showgrid=False,zeroline=False)
         fig.update_yaxes(showgrid=False,zeroline=False)
