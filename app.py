@@ -43,6 +43,8 @@ def chart(fig,annual_axis=False):
     if any(trace.type == 'bar' and trace.orientation == 'h' for trace in fig.data):
         fig.update_yaxes(automargin=True)
         fig.update_layout(margin_l=240)
+        if sum(trace.type == 'bar' for trace in fig.data) > 1:
+            fig.update_layout(margin_t=90,legend=dict(y=1.10,yanchor='bottom',yref='paper'))
     if annual_axis: fig.update_xaxes(dtick=1)
     st.plotly_chart(fig,width='stretch',theme=None)
 
