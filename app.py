@@ -35,6 +35,12 @@ overview,origins,profile_tab,cohorts,methods=st.tabs(['Overview','Origins & maps
 
 def chart(fig,annual_axis=False):
     fig.update_layout(template=TEMPLATE,paper_bgcolor='#FFFFFF',plot_bgcolor='#FFFFFF',margin=dict(l=65,r=30,t=35,b=45),legend=dict(orientation='h',yanchor='bottom',y=1.02,xanchor='left',x=0),legend_title_text='',font=dict(color=NAVY))
+    if any(trace.type == 'scatter' and 'lines' in (trace.mode or '') for trace in fig.data):
+        fig.update_xaxes(showgrid=False,zeroline=False)
+        fig.update_yaxes(showgrid=False,zeroline=False)
+    if any(trace.type == 'bar' and trace.orientation == 'h' for trace in fig.data):
+        fig.update_yaxes(automargin=True)
+        fig.update_layout(margin_l=240)
     if annual_axis: fig.update_xaxes(dtick=1)
     st.plotly_chart(fig,width='stretch',theme=None)
 
@@ -69,12 +75,13 @@ with overview:
     st.caption('These rates have different denominators and cannot be subtracted to calculate a net rate.')
 
 with origins:
-    cards=st.columns(3)
-    cards[0].metric('Geographic origin assigned',f'{mapped:,}',f'{mapped/total:.1%} of arrivals',delta_color='off')
-    cards[1].metric('Unmapped arrivals',f'{total-mapped:,}')
-    original=pd.read_csv(DATA/'belmont_map_coverage_by_year.csv')
-    old=int(filter_years(original,'cohort_year',selected).mapped_arrivals.sum())
-    cards[2].metric('Additional origins after enrichment',f'{mapped-old:+,}')
+    with st.container(key='origin_cards'):
+        cards=st.columns(3)
+        cards[0].metric('Geographic origin assigned',f'{mapped:,}',f'{mapped/total:.1%} of arrivals',delta_color='off')
+        cards[1].metric('Unmapped arrivals',f'{total-mapped:,}')
+        original=pd.read_csv(DATA/'belmont_map_coverage_by_year.csv')
+        old=int(filter_years(original,'cohort_year',selected).mapped_arrivals.sum())
+        cards[2].metric('Additional origins after enrichment',f'{mapped-old:+,}')
     st.warning('Prior NC registration is observed evidence. Historical registration/voting evidence may be older. Inferred state origins use birthplace as a proxy; none of these categories alone proves the immediately previous residence.')
     evidence=st.multiselect('Evidence',list(LABELS),default=list(LABELS),format_func=lambda v:LABELS[v])
     filtered=scoped[scoped.origin_confidence.isin(evidence)]
@@ -156,15 +163,22 @@ with cohorts:
     cohort_colors={str(y):color for y,color in zip(years,blues)}
     chart(px.line(r,x='years_since_arrival',y='Retention (%)',color='Cohort',markers=True,color_discrete_map=cohort_colors).update_layout(xaxis_title='Years since arrival snapshot',yaxis=dict(range=[0,105])))
     st.caption('Year 0 is the ending snapshot that identifies the arrival. Continuous presence means present in every observed annual snapshot; changes between snapshots cannot be detected. Recent cohorts have shorter follow-up.')
-    heat=r.pivot(index='cohort_year',columns='snapshot_year',values='Retention (%)')
-    chart(px.imshow(heat,color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='January 1 snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto').update_traces(text=heat.map(lambda value:f'{value:.1f}%' if pd.notna(value) else '').to_numpy(),texttemplate='%{text}',hovertemplate='Cohort: %{y}<br>Snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>'))
+    st.subheader('Cohort retention triangle')
+    st.write('Read one row from left to right to follow a group of people who arrived in the same year. The first column is their arrival snapshot (Year 0), when everyone in the group is present. Each later column shows the percentage still registered in Belmont that many years later. For example, 80% in Year 3 means 8 out of every 10 people in that arrival group are registered here three years after their arrival snapshot. Blank cells mean those later snapshots have not happened yet, rather than zero retention.')
+    st.caption('Older cohorts are at the top and have more years of follow-up. The selected retention measure also applies to this triangle: “Present at each snapshot” includes people who left and returned; “Continuously present” counts only people present in every annual snapshot.')
+    heat=r.pivot(index='cohort_year',columns='years_since_arrival',values='Retention (%)').sort_index().sort_index(axis=1)
+    fig=px.imshow(heat,color_continuous_scale='Blues',zmin=0,zmax=100,labels=dict(x='Years since arrival snapshot',y='Arrival cohort',color='Retention (%)'),aspect='auto')
+    fig.update_traces(text=heat.map(lambda value:f'{value:.1f}%' if pd.notna(value) else '').to_numpy(),texttemplate='%{text}',hovertemplate='Cohort: %{y}<br>Years since arrival snapshot: %{x}<br>Retention: %{z:.1f}%<extra></extra>')
+    fig.update_xaxes(side='top',dtick=1,showgrid=False,zeroline=False,tickmode='array',tickvals=heat.columns.tolist(),ticktext=[f'Year {int(y)}' for y in heat.columns])
+    fig.update_yaxes(autorange='reversed',dtick=1,showgrid=False,zeroline=False)
+    chart(fig)
     download('Download cohort retention',r.drop(columns=['Cohort']),'cohort_retention.csv')
     st.subheader('Composition of the January 1, 2026 electorate')
     st.caption('Each currently registered voter is assigned to their latest observed arrival spell, or to Before 2016 if no later re-entry was observed. This fixed snapshot is independent of the sidebar range.')
     c=composition_shares(composition)
     fig=px.bar(c,x='arrival_cohort',y='Share (%)',text='Share (%)',custom_data=['voters'],color_discrete_sequence=[BLUE])
     fig.update_traces(texttemplate='%{y:.1f}%',hovertemplate='Cohort: %{x}<br>Voters: %{customdata[0]:,}<br>Share: %{y:.1f}%<extra></extra>')
-    fig.update_layout(xaxis_title='Latest arrival cohort',yaxis_title='Share of the 2026 electorate',xaxis_type='category',yaxis_ticksuffix='%')
+    fig.update_layout(xaxis_title='Latest arrival cohort',yaxis_title='Share of the 2026 electorate',xaxis_type='category',yaxis_ticksuffix='%',xaxis_showgrid=False,yaxis_showgrid=False,xaxis_zeroline=False,yaxis_zeroline=False)
     chart(fig)
     st.subheader('Cumulative cohort share')
     st.caption('Before 2017 includes Before 2016 and the 2016 cohort; Before 2018 adds the 2017 cohort, and so on. Counts include voters still registered on January 1, 2026, assigned to their latest observed arrival spell.')

@@ -46,6 +46,7 @@ def apply_brand():
     [data-testid="stTabs"] [role="tab"]:hover { background:#D9ECFA; color:#062B55; }
     [data-baseweb="tab-highlight"], [data-baseweb="tab-border"] { display:none; }
     [data-testid="stMetric"] { background:#FFFFFF; border:1px solid #E1DCD3; border-top:3px solid #8DBFEA; border-radius:8px; padding:1rem 1.2rem; min-height:112px; box-shadow:0 2px 6px rgba(6,43,85,.025); }
+    .st-key-origin_cards [data-testid="stMetric"] { height:160px; }
     [data-testid="stMetricLabel"] { color:#5C7088; font-size:.8rem; }
     [data-testid="stMetricValue"] { color:#062B55; font-size:2rem; font-weight:650; letter-spacing:-.04em; font-variant-numeric:tabular-nums; }
     [data-testid="stPlotlyChart"] { background:#FFFFFF; border:1px solid #E1DCD3; border-radius:8px; padding:0; overflow:hidden; }
